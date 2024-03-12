@@ -1,14 +1,31 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { TokenService } from './shared/token.service';
+import { AuthStateService } from './shared/auth-state.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'proyectoSusana';
+export class AppComponent implements OnInit{
+  isSignedIn!: boolean;
+  title = 'puntalFrontend';
+  constructor( private auth: AuthStateService,
+    public router: Router,
+    public token: TokenService){}
+
+    ngOnInit(): void {
+      this.auth.userAuthState.subscribe(val => {
+        this.isSignedIn = val;
+      });
+    }
+
+    signOut() {
+      this.token.removeToken();
+      this.auth.setAuthState(false);
+      this.router.navigate(['login']);
+    }
+ 
 }
