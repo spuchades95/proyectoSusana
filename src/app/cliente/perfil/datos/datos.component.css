@@ -1,0 +1,115 @@
+
+.account-navigation {
+
+  margin: 16px 0;
+}
+
+.account-details {
+
+
+}
+
+.contact-details {
+ 
+
+}
+
+.welcome-message {
+  width: 669px;
+height: 139px;
+flex-shrink: 0;
+  border-radius: 20px;
+  background: var(--Wedgewood-200, #D0DCE7);
+}
+
+.Label-f{
+  color: var(--Wedgewood-950, #1D2834);
+  /* H4 Lorem ipsum dolor */
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+.wmesa{
+  color: #000;
+font-family: Questrial;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.823px; /* 70.097% */
+}
+
+.camb{
+  border-radius: 5.261px;
+border: 1.052px solid var(--Wedgewood-700, #36536E);
+background: rgba(64, 149, 154, 0.00);
+}
+
+
+.izquierda{
+  color: var(--Wedgewood-900, #2C3E4E);
+  /* 16 questrial */
+  font-family: Questrial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.izquierdaT{
+  color: var(--Wedgewood-950, #1D2834);
+/* H4 Lorem ipsum dolor */
+font-family: Questrial;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.Info{
+  color: var(--Wedgewood-950, #1D2834);
+text-align: center;
+/* H1 Lorem ipsim dolor */
+font-family: Questrial;
+font-size: 39.063px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+
+
+
+.MedioT{
+  color: var(--Wedgewood-950, #1D2834);
+font-family: Questrial;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 29.463px; /* 147.313% */
+}
+.Guarda{
+  border-radius: 5.261px;
+border: 1.052px solid var(--Wedgewood-700, #36536E);
+background: var(--Wedgewood-700, #36536E);
+color: var(--Wedgewood-50, #F5F7FA);
+text-align: center;
+font-family: Inter;
+font-size: 14.731px;
+font-style: normal;
+font-weight: 700;
+
+}
+
+
+
+
+.Line {
+  width: 1px;
+  background: #D0DCE7;
+}

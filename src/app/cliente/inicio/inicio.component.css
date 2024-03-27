@@ -1,0 +1,49 @@
+.banner {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 29px;
+  text-align: center; 
+  width: 100%;
+  height: 301px;
+  background: rgba(0, 0, 0, 0.50) url(/assets/img/banner.png) center/cover no-repeat;
+  position: relative;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Color de la capa semitransparente */
+  }
+
+.card {
+  margin-top: 29px;
+  margin-left: 50px;
+  width: 258px;
+  height: 232px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+  h1{
+    color: var(--Wedgewood-50, #F5F7FA);
+text-align: center;
+text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: var(--Wedgewood-50, #F5F7FA);
+font-family: Questrial;
+font-size: 96px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: absolute;
+white-space: nowrap;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+text-align: center;
+z-index: 1;
+  }

@@ -29,7 +29,8 @@ import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 // Se exporta la clase AppRoutingModule
 // CanActivate es un guard que se utiliza para verificar si el usuario tiene el rol necesario para acceder a la ruta
 // Se importa el guard roleGuard
-// De esta manera las rutas se protegen con el guard roleGuard y rediriigen al componente correspondiente
+// De esta manera las rutas se protegen con el guard roleGuard y rediriigen al componente correspondiente/*
+/*
 const routes: Routes = [
   {
     path: '',
@@ -159,9 +160,11 @@ const routes: Routes = [
     component: ErrorHandlerComponent,
    //  redirectTo: '/login' //Por eso redirigia al login. Doble asterisco es para cualquier ruta que no exista.
   }
-];
+];*/
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+   // RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }
