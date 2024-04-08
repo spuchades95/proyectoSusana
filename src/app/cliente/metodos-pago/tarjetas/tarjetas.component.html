@@ -1,0 +1,25 @@
+<div class="credit-card-design">
+  <ng-container *ngIf="mostrarAgregar; else mostrarTarjeta">
+
+    <div class="add-card">
+      <img src="assets/img/plus.svg" class="plus" />
+      Añadir tarjeta de crédito/débito
+      <img src="assets/img/creditcard.svg" class="ccard" />
+    </div>
+  </ng-container>
+  <ng-template #mostrarTarjeta>
+    <div class="existing-card">
+        <div class="card-details">
+          <div class="card-info">
+            <img src="assets/img/creditcard.svg" class="plus" />
+            <p class="card-number"> **** **** **** 3456</p>
+            <img src="assets/img/dots.svg" class="dots" />
+          </div>
+          <div class="owner-expiry">
+            <p class="owner">Propietario: José Ramón García</p>
+            <p class="expiry-date">Expira el 12/24</p>
+          </div>
+        </div>
+      </div>
+  </ng-template>
+</div>

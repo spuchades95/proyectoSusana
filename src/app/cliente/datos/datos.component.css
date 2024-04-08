@@ -1,0 +1,212 @@
+.account-navigation {
+  margin-top: 37px;
+  margin-left: 78px;
+  margin-bottom: 31px;
+  position: relative; 
+}
+
+.account-details {
+  margin-left: 78px;
+  margin-bottom: 25px;
+}
+label {
+
+  font-weight: bold;
+}
+.formLeft .mb-3 {
+  display: flex;
+  flex-direction: column; 
+}
+
+.formRight .mb-3 {
+  display: flex;
+  flex-direction: column; 
+}
+
+
+.formLeft .mb-3 input {
+  width: 280px;
+  margin-top: 5px; 
+}
+
+
+.formRight .mb-3 select {
+  margin-top: 5px; 
+  width: 280px;
+
+}
+input,select {
+ 
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: "Questrial", sans-serif;
+  color: #555;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30px;
+}
+
+hr {
+  width: 50%; 
+}
+
+hr.vertical-line {
+  position: absolute; 
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%) rotate(90deg); 
+width: 500px;
+ 
+}
+
+.welcome-message {
+  width: 669px;
+  margin-left: 78px;
+  margin-top: 25px;
+  margin-bottom: 25px; 
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--Wedgewood-200, #d0dce7);
+}
+
+.Label-f {
+  color: var(--Wedgewood-950, #1d2834);
+  /* H4 Lorem ipsum dolor */
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.wmesa {
+  color: #000;
+  font-family: Questrial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400; 
+  margin-left: 15px;
+  padding: 10px;
+  line-height: 1.5; 
+  margin-bottom: -5px; 
+}
+.formacount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formLeft {
+  flex: 1;
+}
+
+.formRight {
+  flex: 1;
+  margin-left: -550px;
+}
+.camb {
+  color: var(--Wedgewood-700, #36536e);
+  text-align: center;
+  font-family: Inter;
+  font-size: 14.731px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29.463px; /* 200% */
+  border-radius: 5.261px;
+  border: 1.052px solid var(--Wedgewood-700, #36536e);
+  background: rgba(64, 149, 154, 0);
+  
+}
+
+.guarda {
+  border-radius: 5.261px;
+  border: 1.052px solid var(--Wedgewood-700, #36536e);
+  background: var(--Wedgewood-700, #36536e);
+  color: var(--Wedgewood-50, #f5f7fa);
+  line-height: 29.463px; /* 200% */
+  text-align: center;
+  font-family: Inter;
+  font-size: 14.731px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 90px; 
+  margin-left: -473px;
+} 
+.contact-details {
+  margin-left: 78px;
+
+
+}
+.contact-details .camb {
+  margin-left: 650px; 
+  margin-top: -57px; 
+  
+}
+
+
+.MedioT {
+  color: var(--Wedgewood-950, #1d2834);
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.463px; /* 147.313% */
+}
+
+.izquierda {
+  color: var(--Wedgewood-900, #2c3e4e);
+  /* 16 questrial */
+  font-family: Questrial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 37px;
+  margin-left: 78px;
+  margin-bottom: 10px;
+}
+.perfil {
+  color: var(--Wedgewood-950, #1d2834); 
+  font-family: Questrial; 
+  font-size: 20px; 
+  font-style: normal; 
+  font-weight: 400; 
+  line-height: normal;
+ 
+}
+.izquierdaT {
+  color: var(--Wedgewood-950, #1d2834);
+  /* H4 Lorem ipsum dolor */
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 55px;
+  margin-left: 78px;
+  margin-bottom: 35px;
+}
+
+ 
+a {
+  text-decoration: none;
+
+}
+
+.Info {
+  color: var(--Wedgewood-950, #1d2834);
+  margin-left: 78px;
+  /* H1 Lorem ipsim dolor */
+  font-family: Questrial;
+  font-size: 39.063px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 25px;
+}
+
+

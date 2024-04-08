@@ -1,0 +1,68 @@
+.Info {
+    color: var(--Wedgewood-950, #1d2834);
+
+    /* H1 Lorem ipsim dolor */
+    font-family: Questrial;
+    font-size: 39.063px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 25px;
+  }
+   
+  .Label-f {
+    color: var(--Wedgewood-950, #1d2834);
+    /* H4 Lorem ipsum dolor */
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .formLeft {
+    flex: 1;
+  }
+  
+  .formLeft .mb-3 {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    flex: 1;
+    font-weight: bold;
+  }
+  input {
+    width: 30%; 
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Questrial", sans-serif;
+    color: #555;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 30px;
+  }
+
+
+  .formacount {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .camb {
+    color: var(--Wedgewood-700, #36536e);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14.731px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29.463px; /* 200% */
+    border-radius: 5.261px;
+    border: 1.052px solid var(--Wedgewood-700, #36536e);
+    background: rgba(64, 149, 154, 0);
+    
+  }
