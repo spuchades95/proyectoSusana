@@ -1,0 +1,46 @@
+.account-navigation {
+    margin-top: 37px;
+    margin-left: 78px;
+    margin-bottom: 31px;
+    position: relative;
+  }a {
+    text-decoration: none;
+  }
+  .izquierdaT {
+    color: var(--Wedgewood-950, #1d2834);
+    /* H4 Lorem ipsum dolor */
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 55px;
+    margin-left: 78px;
+    margin-bottom: 35px;
+  }
+  .Info {
+    color: var(--Wedgewood-950, #1d2834);
+  
+    /* H1 Lorem ipsim dolor */
+    font-family: Questrial;
+    font-size: 39.063px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 25px;
+  }
+  .service{
+
+    color: var(--Wedgewood-950, #1D2834);
+/* H4 Lorem ipsum dolor */
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: var(--Wedgewood-950, #1D2834);
+font-family: Questrial;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: underline;
+text-decoration-color: #F98F07;
+text-decoration-thickness: 3px;
+  }

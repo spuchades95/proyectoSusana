@@ -57,7 +57,7 @@
 }
 
 .owner-expiry {
-  margin-left: 10px; /* Ajusta el margen izquierdo del contenedor de owner y expiry-date */
+  margin-left: 10px; 
 }
 
 .plus {
@@ -68,7 +68,7 @@
 .card-info,
 .owner-expiry {
   display: flex;
-  align-items: center; /* Alinea los elementos al centro */
+  align-items: center; 
 }
 .card-number {
   margin-left: 10px;

@@ -1,0 +1,166 @@
+.container {
+  width: 1250px;
+  height: 700px;
+  position: relative;
+  margin-top: 35px;
+}
+
+.image {
+  width: 500px;
+  height: 700px;
+  background: linear-gradient(0deg, #d9d9d9 0%, #d9d9d9 100%);
+  border-radius: 5px;
+}
+
+.title {
+  top: 7px;
+  left: 629px;
+  padding-left: 50px;
+  color: #1a2b32;
+  font-size: 39.06px;
+  font-family: Questrial;
+  margin-bottom: 20px;
+}
+
+.button {
+  text-align: center;
+  font-size: 25px;
+  font-family: Questrial;
+  font-weight: 400;
+  word-wrap: break-word;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.addToCart {
+  background: #a6bed3;
+  color: #1d2834;
+  width: 305px;
+  height: 56px;
+  border-color: #a6bed3;
+}
+
+.contractNow {
+  background: #dd6802;
+  color: #fffaeb;
+  width: 305px;
+  height: 56px;
+  border-color: #dd6802;
+}
+
+.priceSection {
+  width: 610px;
+  height: 56px;
+}
+
+.priceBackground {
+  background: #4f7796;
+  width: 610px;
+  height: 56px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+.priceTitle {
+  margin-left: 50px;
+  color: #f5f7fa;
+  font-size: 31.25px;
+  font-family: Questrial;
+}
+
+.description {
+  top: 86px;
+  left: 629px;
+  width: 637px;
+  color: black;
+  font-size: 25px;
+  font-family: Questrial;
+  margin-bottom: 100px;
+}
+
+.options {
+  top: 389px;
+  left: 618px;
+  display: flex;
+  flex-direction: column;
+}
+
+.optionContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.option {
+  display: flex;
+
+  flex-direction: row;
+}
+
+.optionTitle {
+  color: #505050;
+  font-size: 20px;
+  font-family: Questrial;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.formacount {
+  display: flex;
+  justify-content: space-between;
+}
+.optionPriceText {
+  color: black;
+  font-size: 20px;
+  font-family: Questrial;
+  align-self: baseline;
+  margin-right: 10px;
+}
+.optionPrice {
+  color: black;
+  font-size: 20px;
+  font-family: Questrial;
+  margin-right: 10px;
+}
+.formLeft {
+  flex: 1;
+}
+
+.formRight {
+  flex: 1;
+}
+.additionalInfo {
+  top: 385px;
+  left: 822px;
+}
+.centra {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.infoItem {
+  color: black;
+  font-size: 20px;
+  font-family: Questrial;
+  margin-bottom: 10px;
+  margin-left: 65px;
+}
+.additionalInfo {
+  display: flex;
+  flex-direction: column;
+}
+input[type="radio"] {
+  -ms-transform:  scale(2.1); 
+  -webkit-transform:  scale(2.1);; 
+  transform:  scale(2.1);
+
+}
+
+input[type="radio"]:checked {
+  -ms-transform:  scale(2.1);; 
+  -webkit-transform:  scale(2.1); 
+  transform: scale(2.1);
+  accent-color:#dd6802;
+}

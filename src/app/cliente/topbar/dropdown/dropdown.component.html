@@ -1,0 +1,13 @@
+<div class="topbardos">
+  <div class="dropdown" [class.show]="isOpen" (click)="toggleMenu()">
+    <img alt="menu" src="/assets/img/menu.svg" class="menu" />
+    <span class="menu-text">SERVICIOS</span>
+    <div class="dropdown-content">
+      <a class="title">SERVICIOS </a> 
+      <div class="line"></div> 
+      <div class="services-list"> 
+        <a *ngFor="let servicio of servicios" href="#">{{ servicio }}</a>
+      </div>
+    </div>
+  </div>
+</div>
