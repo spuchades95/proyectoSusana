@@ -12,6 +12,7 @@ export class DropdownComponent {
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
+    
   }
 
   @HostListener('document:click', ['$event'])

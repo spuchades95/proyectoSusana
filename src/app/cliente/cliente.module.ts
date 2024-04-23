@@ -16,6 +16,14 @@ import { PerfilUserComponent } from './topbar/perfil-user/perfil-user.component'
 import { FichaservicioComponent } from './fichaservicio/fichaservicio.component';
 import { BoatsComponent } from './misembarcaciones/boats/boats.component';
 import { ModalboatsComponent } from './misembarcaciones/boats/modalboats/modalboats.component';
+import { DropuserComponent } from './topbar/perfil-user/dropuser/dropuser.component';
+import { DropcarritoComponent } from './topbar/carrito/dropcarrito/dropcarrito.component';
+import { CestaComponent } from './cesta/cesta.component';
+import { ResumenpedidoComponent } from './cesta/resumenpedido/resumenpedido.component';
+import { RecomendacionesComponent } from './cesta/recomendaciones/recomendaciones.component';
+import { TarjetaComponent } from './cesta/tarjeta/tarjeta.component';
+import { BarcoComponent } from './cesta/barco/barco.component';
+import { PagosComponent } from './cesta/pagos/pagos.component';
 
 
 
@@ -39,11 +47,20 @@ import { ModalboatsComponent } from './misembarcaciones/boats/modalboats/modalbo
     FichaservicioComponent,
     BoatsComponent,
     ModalboatsComponent,
+    DropuserComponent,
+    DropcarritoComponent,
+    CestaComponent,
+    ResumenpedidoComponent,
+    RecomendacionesComponent,
+    TarjetaComponent,
+    BarcoComponent,
+    PagosComponent,
+    
    
   ],
   imports: [
     CommonModule
   ],
-  exports: [MisembarcacionesComponent]
+  exports: [MisembarcacionesComponent, MisserviciosComponent,DatosComponent,CestaComponent]
 })
 export class ClienteModule { }

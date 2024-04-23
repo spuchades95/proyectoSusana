@@ -1,0 +1,39 @@
+.personita .icono {
+    width: 50px;
+    height: 50px;
+    background-image: url("/assets/img/usuario.svg");
+    background-size: cover;
+  
+    border-radius: 50%;
+    background-color: #ffa500;
+    left: 5px;
+    position: absolute;
+  }
+  .dropuser {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+  }
+  .personita {
+    position: relative;
+    left: 53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: var(--Wedgewood-50, #f5f7fa);
+    color: var(--Wedgewood-900, #2c3e4e);
+    text-align: center;
+    /* H4 Lorem ipsum dolor */
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  
+   
+  }

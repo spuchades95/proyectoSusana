@@ -13,6 +13,11 @@ export class TopbarComponent {
 
   name: string = this.capitalizeFirstLetter(localStorage.getItem('name') || 'Usuario');
   role = localStorage.getItem('role') || null;
+  showDropUser: boolean = false;
+
+  handleDropdownToggle(showDropUser: boolean) {
+    this.showDropUser = showDropUser;
+  }
   constructor(private authService: AuthService, private router: Router, private tokenService: TokenService) { }
 
   logout() {

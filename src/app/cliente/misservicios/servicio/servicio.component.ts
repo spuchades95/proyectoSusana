@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ModalservicioComponent } from './modalservicio/modalservicio.component';
 @Component({
   selector: 'app-servicio',
   templateUrl: './servicio.component.html',
@@ -9,7 +10,7 @@ export class ServicioComponent implements OnInit{
   status: string = 'Activo'; 
   statusImageUrl: string = 'assets/img/inprocess.svg';
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
  
@@ -33,5 +34,16 @@ export class ServicioComponent implements OnInit{
     }
   }
 
+
+
+  openModal(): void {
+    const dialogRef = this.dialog.open(ModalservicioComponent, {
+      data: { /* aquí puedes pasar datos al modal si es necesario */ }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Modal cerrado');
+    });
+  }
 
 }

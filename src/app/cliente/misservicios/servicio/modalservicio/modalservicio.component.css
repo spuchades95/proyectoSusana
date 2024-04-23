@@ -1,0 +1,96 @@
+.modal-body {
+  border-radius: 20px;
+    background: var(--Wedgewood-200, #d0dce7);
+    filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.30));
+  }
+  
+  .details-body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    background: var(--Wedgewood-200, #d0dce7);
+  }
+  
+  .ticket-section {
+    width: 80%;
+    max-width: 500px; 
+    text-align: center;
+  }
+.especial{
+
+    color: #000;
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left; 
+ 
+   
+}.description-container, .price-container {
+  flex: 1;
+}
+
+.price-container{
+  margin-left: 35px;
+}
+  .ticket-info {
+
+    margin-bottom: 20px; 
+    text-align: left;  
+}
+  
+  .description-price {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+   
+  }
+  
+  .description, .price {
+    display: inline-block;
+    max-width: 100%;
+  }
+  
+  .info {
+    color: #000;
+    text-align: center;
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .line {
+    cursor: text;
+    flex: 1;
+    height: 0;
+    border-top: 0.8px dashed #F98F07;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    color: #000;
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .details {
+    font-family: Questrial;
+    border-radius: 20px;
+    width: 747px;
+    max-height: auto;
+    font-size: 16px;
+    flex-shrink: 0;
+
+    background: var(--Wedgewood-200, #d0dce7);
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  }
+   

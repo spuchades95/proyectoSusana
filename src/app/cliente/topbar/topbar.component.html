@@ -1,5 +1,6 @@
 <nav class="topbar">
   <img alt="Logo portos de galicia" src="/assets/img/Group.svg" class="logo" />
+
   <form>
     <input
       class="buscador"
@@ -8,7 +9,9 @@
       name="busca"
     />
   </form>
-  <div class="personita"><span class="icono"></span>{{ name }}</div>
-  <img alt="carrito" src="/assets/img/carrito.svg" class="carrito" />
+  <div class="right">
+<app-perfil-user (dropdownToggled)="handleDropdownToggle($event)"></app-perfil-user>
+ <app-carrito></app-carrito>
+</div>
 </nav>
 <app-dropdown></app-dropdown>

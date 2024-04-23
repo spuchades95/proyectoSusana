@@ -30,140 +30,140 @@ import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 // CanActivate es un guard que se utiliza para verificar si el usuario tiene el rol necesario para acceder a la ruta
 // Se importa el guard roleGuard
 // De esta manera las rutas se protegen con el guard roleGuard y rediriigen al componente correspondiente/*
-/*
-const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/login',
-    pathMatch: 'full',
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'dashboard',
-    component: ContenidoComponent,
-    children: [
-      {
-        path: '',
-        canActivate: [roleGuard], // Se utiliza el guard para verificar el rol del usuario
 
-        component: DashboardComponent,
-        data: { role: '2' }
-      }
-    ]
-  },
-  {
-    path: 'embarcaciones',
-    canActivate: [roleGuard],
-    data: { role: '2' },
-    component: ContenidoComponent,
-    children: [
-      {
-        path: 'tabla',
-        component: TablaComponent,
-      },
-      {
-        path: 'formulario',
-        component: FormularioEmbarcacionComponent,
-      },
-      {
-        path: '',
-        redirectTo: 'tabla',
-        pathMatch: 'full',
-      },
-    ],
-  },
-  {
-    path: 'plazabase',
-    canActivate: [roleGuard],
-    data: { role: '2' },
-    component: ContenidoComponent,
-    children: [
-      {
-        path: 'tabla',
-        component: TablaPbComponent,
-      },
-      {
-        path: 'formulario',
-        component: FormularioPbComponent,
-      },
-      {
-        path: '',
-        redirectTo: 'tabla',
-        pathMatch: 'full',
-      },
-    ],
-  },
-  {
-    path: 'transito',
-    canActivate: [roleGuard],
-    data: { role: '2' },
-    component: ContenidoComponent,
-    children: [
-      {
-        path: 'tabla',
-        component: TablaTransitoComponent,
-      },
-      {
-        path: 'formulario',
-        component: FormularioTransitoComponent,
-      },
-      {
-        path: '',
-        redirectTo: 'tabla',
-        pathMatch: 'full',
-      },
-    ],
-  },
-  {
-    path: 'guardiacivil',
-    canActivate: [roleGuard],
-    data: { role: '4' },
-    component: ContenidoComponent, // O el componente que corresponda
+// const routes: Routes = [
+//   {
+//     path: '',
+//     redirectTo: '/login',
+//     pathMatch: 'full',
+//   },
+//   {
+//     path: 'login',
+//     component: LoginComponent,
+//   },
+//   {
+//     path: 'dashboard',
+//     component: ContenidoComponent,
+//     children: [
+//       {
+//         path: '',
+//         canActivate: [roleGuard], // Se utiliza el guard para verificar el rol del usuario
 
-    children: [
-      {
+//         component: DashboardComponent,
+//         data: { role: '2' }
+//       }
+//     ]
+//   },
+//   {
+//     path: 'embarcaciones',
+//     canActivate: [roleGuard],
+//     data: { role: '2' },
+//     component: ContenidoComponent,
+//     children: [
+//       {
+//         path: 'tabla',
+//         component: TablaComponent,
+//       },
+//       {
+//         path: 'formulario',
+//         component: FormularioEmbarcacionComponent,
+//       },
+//       {
+//         path: '',
+//         redirectTo: 'tabla',
+//         pathMatch: 'full',
+//       },
+//     ],
+//   },
+//   {
+//     path: 'plazabase',
+//     canActivate: [roleGuard],
+//     data: { role: '2' },
+//     component: ContenidoComponent,
+//     children: [
+//       {
+//         path: 'tabla',
+//         component: TablaPbComponent,
+//       },
+//       {
+//         path: 'formulario',
+//         component: FormularioPbComponent,
+//       },
+//       {
+//         path: '',
+//         redirectTo: 'tabla',
+//         pathMatch: 'full',
+//       },
+//     ],
+//   },
+//   {
+//     path: 'transito',
+//     canActivate: [roleGuard],
+//     data: { role: '2' },
+//     component: ContenidoComponent,
+//     children: [
+//       {
+//         path: 'tabla',
+//         component: TablaTransitoComponent,
+//       },
+//       {
+//         path: 'formulario',
+//         component: FormularioTransitoComponent,
+//       },
+//       {
+//         path: '',
+//         redirectTo: 'tabla',
+//         pathMatch: 'full',
+//       },
+//     ],
+//   },
+//   {
+//     path: 'guardiacivil',
+//     canActivate: [roleGuard],
+//     data: { role: '4' },
+//     component: ContenidoComponent, // O el componente que corresponda
 
-        path: '',
+//     children: [
+//       {
 
-        component: TablaGuardiaComponent
-      }
-    ]
-  },
-  {
-    path: 'notificaciones',
-    canActivate: [roleGuard],
-    data: { role: '2' },
-    component: ContenidoComponent, // O el componente que corresponda
-    children: [
-      {
-        path: '',
-        component: NotificacionesComponent,
-      },
-    ],
-  },
-  {
-    path: 'movil',
-    canActivate: [roleGuard],
-    data: { role: '3' },
-    component: PlantillaGuardamuellesComponent, 
-    children: [
-      { path: '', component: ListaCardsComponent },
-    { path: 'card-incidencia', component: CardIncidenciaComponent },
-      { path: 'card-confirmacion-transito', component: CardConfirmacionTransitoComponent },
-    ]
-  },
-  {
-    path: '**',
-    component: ErrorHandlerComponent,
-   //  redirectTo: '/login' //Por eso redirigia al login. Doble asterisco es para cualquier ruta que no exista.
-  }
-];*/
+//         path: '',
+
+//         component: TablaGuardiaComponent
+//       }
+//     ]
+//   },
+//   {
+//     path: 'notificaciones',
+//     canActivate: [roleGuard],
+//     data: { role: '2' },
+//     component: ContenidoComponent, // O el componente que corresponda
+//     children: [
+//       {
+//         path: '',
+//         component: NotificacionesComponent,
+//       },
+//     ],
+//   },
+//   {
+//     path: 'movil',
+//     canActivate: [roleGuard],
+//     data: { role: '3' },
+//     component: PlantillaGuardamuellesComponent, 
+//     children: [
+//       { path: '', component: ListaCardsComponent },
+//     { path: 'card-incidencia', component: CardIncidenciaComponent },
+//       { path: 'card-confirmacion-transito', component: CardConfirmacionTransitoComponent },
+//     ]
+//   },
+//   {
+//     path: '**',
+//     component: ErrorHandlerComponent,
+//    //  redirectTo: '/login' //Por eso redirigia al login. Doble asterisco es para cualquier ruta que no exista.
+//   }
+// ];
 @NgModule({
   imports: [
-   // RouterModule.forRoot(routes)
+    // RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
 })

@@ -1,1 +1,4 @@
-<p>perfil-user works!</p>
+<div class="personita" (click)="toggleDropdown()">
+  <span class="icono"></span>{{ name }}
+  <app-dropuser class="dropuser" *ngIf="showDropUser"></app-dropuser>
+</div>

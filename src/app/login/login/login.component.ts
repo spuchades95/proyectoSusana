@@ -35,11 +35,12 @@ export class LoginComponent {
         localStorage.setItem('user', JSON.stringify(result.user));
         localStorage.setItem('name', result.user.NombreUsuario);
         localStorage.setItem('role', result.user.Rol_id);
+        localStorage.setItem('fullname', result.user.NombreCompleto);
         localStorage.setItem('id', result.user.id);
         console.log('Resultado del id:', result.user.id);
         console.log('Resultado del usuario:', result.user.Rol_id);
         console.log('Resultado del nombre:', result.user.NombreUsuario);
-
+        console.log('Resultado del nombre:', result.user.NombreCompleto);
         this.responseHandler(result);
 
         const token = this.token.getToken();
