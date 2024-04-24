@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./resumenpedido.component.css']
 })
 export class ResumenpedidoComponent {
+  botonPagoActivado = false;
 
+  realizarPago() {
+    // Aquí puedes implementar la lógica para procesar el pago
+  }
 }

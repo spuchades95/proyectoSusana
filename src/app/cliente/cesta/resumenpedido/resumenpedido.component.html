@@ -25,7 +25,8 @@
         </span>
       </div>
       <div class="botones">
-      <button class="btn boton">Ir al pago</button>
+        <button class="btn boton" (click)="realizarPago()" [disabled]="!botonPagoActivado">Ir al pago</button>
+
       </div>
     </div>
   </div>

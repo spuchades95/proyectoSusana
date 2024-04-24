@@ -49,7 +49,17 @@ line-height: normal;
 margin-left: 210px;
 text-decoration: underline;
 }
-
+.cesta{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--Wedgewood-950, #1D2834);
+/* H4 Lorem ipsum dolor */
+font-family: Questrial;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
   .patata{
     margin-top: 95px!important;
     margin-bottom: 20px;

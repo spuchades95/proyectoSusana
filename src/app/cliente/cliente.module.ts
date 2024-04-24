@@ -24,6 +24,7 @@ import { RecomendacionesComponent } from './cesta/recomendaciones/recomendacione
 import { TarjetaComponent } from './cesta/tarjeta/tarjeta.component';
 import { BarcoComponent } from './cesta/barco/barco.component';
 import { PagosComponent } from './cesta/pagos/pagos.component';
+import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
 
 
 
@@ -55,6 +56,7 @@ import { PagosComponent } from './cesta/pagos/pagos.component';
     TarjetaComponent,
     BarcoComponent,
     PagosComponent,
+    ServicestaComponent,
     
    
   ],
