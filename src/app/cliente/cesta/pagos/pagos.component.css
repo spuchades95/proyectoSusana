@@ -1,0 +1,161 @@
+.account-navigation {
+    margin-top: 37px;
+    margin-left: 78px;
+    margin-bottom: 31px;
+    position: relative;
+  }a {
+    text-decoration: none;
+  }
+  .izquierdaT {
+    color: var(--Wedgewood-950, #1d2834);
+    /* H4 Lorem ipsum dolor */
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 55px;
+    margin-left: 78px;
+    margin-bottom: 35px;
+  }
+  .Info {
+    color: var(--Wedgewood-950, #1d2834);
+  
+    /* H1 Lorem ipsim dolor */
+    font-family: Questrial;
+    font-size: 39.063px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 25px;
+  }
+.link{
+    color: var(--Wedgewood-950, #1D2834);
+/* P Lorem ipsim dolor */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.link-e{
+    color: var(--Wedgewood-950, #1D2834);
+/* P Lorem ipsim dolor */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 210px;
+text-decoration: underline;
+}
+
+.cesta{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--Wedgewood-950, #1D2834);
+/* H4 Lorem ipsum dolor */
+font-family: Questrial;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+  .patata{
+    margin-top: 95px!important;
+    margin-bottom: 20px;
+  }
+  .service{
+
+    color: var(--Wedgewood-950, #1D2834);
+/* H4 Lorem ipsum dolor */
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: var(--Wedgewood-950, #1D2834);
+font-family: Questrial;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: underline;
+text-decoration-color: #F98F07;
+text-decoration-thickness: 3px;
+  }
+  .perfil {
+    color: var(--Wedgewood-950, #1d2834);
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .contenedordelacesta{
+    margin-top: 35px;
+    margin-left: 190px;
+  }
+  .group-container {
+    width: 750px;
+    height: 196px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rectangle {
+    width: 750px;
+    height: 196px;
+    background: #D0DCE7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+ 
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .image-column, .text-column, .icon-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container {
+    width: 139.01px;
+    height: 125px;
+    border-radius: 10.78px;
+  }
+  input[type=checkbox] {
+    transform: scale(1.5);
+  }
+  
+  input[type="checkbox"]:checked{
+  
+    transform: scale(1.5);
+    accent-color:#dd6802;
+  
+  }
+  .text-container {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-right: 25px;
+  }
+  
+  .price {
+    font-size: 16px;    
+    margin-left: 35px;
+    margin-bottom: 5px;
+  }
+  
+ 
+  

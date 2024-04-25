@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./servicesta.component.css']
 })
 export class ServicestaComponent {
-
+seleccionado=false;
 }

@@ -63,6 +63,6 @@ import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
   imports: [
     CommonModule
   ],
-  exports: [MisembarcacionesComponent, MisserviciosComponent,DatosComponent,CestaComponent]
+  exports: [MisembarcacionesComponent, MisserviciosComponent,DatosComponent,CestaComponent,PagosComponent]
 })
 export class ClienteModule { }
