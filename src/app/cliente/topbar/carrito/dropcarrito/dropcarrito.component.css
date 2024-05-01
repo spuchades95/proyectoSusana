@@ -1,0 +1,57 @@
+.background {
+  margin-top: 10px;
+  width: 210px;
+  height: 139px;
+  position: relative;
+  background: #f5f7fa;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+.cestito{
+    color: var(--Wedgewood-950, #1D2834);
+    /* H4 Lorem ipsum dolor */
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+
+
+.line {
+  cursor: text;
+  flex: 1;
+  height: 0;
+  border-top: 0.8px dashed #f98f07;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.triangle {
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent; 
+  border-bottom: 10px solid #f9f9f9; 
+  position: absolute;
+  top: -10px; 
+  left: 90%; 
+  transform: translateX(-50%); 
+}

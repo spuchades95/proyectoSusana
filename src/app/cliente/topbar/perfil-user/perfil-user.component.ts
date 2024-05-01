@@ -24,7 +24,6 @@ export class PerfilUserComponent {
   logout() {
 
     this.tokenService.removeToken();
-
     this.router.navigate(['/login']);
   }
   private capitalizeFirstLetter(name: string): string {

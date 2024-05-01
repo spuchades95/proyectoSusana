@@ -33,7 +33,6 @@ import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
   declarations: [
     TopbarComponent,
     InicioComponent,
- 
     MetodosPagoComponent,
     DatosComponent,
     MisembarcacionesComponent,
@@ -63,6 +62,6 @@ import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
   imports: [
     CommonModule
   ],
-  exports: [MisembarcacionesComponent, MisserviciosComponent,DatosComponent,CestaComponent,PagosComponent]
+  exports: [ FichaservicioComponent, MetodosPagoComponent, MisembarcacionesComponent, MisserviciosComponent,DatosComponent,CestaComponent,PagosComponent,InicioComponent]
 })
 export class ClienteModule { }

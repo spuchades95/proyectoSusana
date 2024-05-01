@@ -21,6 +21,13 @@ import { PlantillaGuardamuellesComponent } from './movil/plantilla-guardamuelles
 import { roleGuard } from './role.guard';
 import { ListaCardsComponent } from './movil/lista-cards/lista-cards.component';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
+import { DatosComponent } from './cliente/datos/datos.component';
+import { MetodosPagoComponent } from './cliente/metodos-pago/metodos-pago.component';
+import { MisembarcacionesComponent } from './cliente/misembarcaciones/misembarcaciones.component';
+import { MisserviciosComponent } from './cliente/misservicios/misservicios.component';
+import { InicioComponent } from './cliente/inicio/inicio.component';
+import { CestaComponent } from './cliente/cesta/cesta.component';
+import { FichaservicioComponent } from './cliente/fichaservicio/fichaservicio.component';
 
 
 
@@ -31,140 +38,182 @@ import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 // Se importa el guard roleGuard
 // De esta manera las rutas se protegen con el guard roleGuard y rediriigen al componente correspondiente/*
 
-// const routes: Routes = [
-//   {
-//     path: '',
-//     redirectTo: '/login',
-//     pathMatch: 'full',
-//   },
-//   {
-//     path: 'login',
-//     component: LoginComponent,
-//   },
-//   {
-//     path: 'dashboard',
-//     component: ContenidoComponent,
-//     children: [
-//       {
-//         path: '',
-//         canActivate: [roleGuard], // Se utiliza el guard para verificar el rol del usuario
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'dashboard',
+    component: ContenidoComponent,
+    children: [
+      {
+        path: '',
+        canActivate: [roleGuard], // Se utiliza el guard para verificar el rol del usuario
 
-//         component: DashboardComponent,
-//         data: { role: '2' }
-//       }
-//     ]
-//   },
-//   {
-//     path: 'embarcaciones',
-//     canActivate: [roleGuard],
-//     data: { role: '2' },
-//     component: ContenidoComponent,
-//     children: [
-//       {
-//         path: 'tabla',
-//         component: TablaComponent,
-//       },
-//       {
-//         path: 'formulario',
-//         component: FormularioEmbarcacionComponent,
-//       },
-//       {
-//         path: '',
-//         redirectTo: 'tabla',
-//         pathMatch: 'full',
-//       },
-//     ],
-//   },
-//   {
-//     path: 'plazabase',
-//     canActivate: [roleGuard],
-//     data: { role: '2' },
-//     component: ContenidoComponent,
-//     children: [
-//       {
-//         path: 'tabla',
-//         component: TablaPbComponent,
-//       },
-//       {
-//         path: 'formulario',
-//         component: FormularioPbComponent,
-//       },
-//       {
-//         path: '',
-//         redirectTo: 'tabla',
-//         pathMatch: 'full',
-//       },
-//     ],
-//   },
-//   {
-//     path: 'transito',
-//     canActivate: [roleGuard],
-//     data: { role: '2' },
-//     component: ContenidoComponent,
-//     children: [
-//       {
-//         path: 'tabla',
-//         component: TablaTransitoComponent,
-//       },
-//       {
-//         path: 'formulario',
-//         component: FormularioTransitoComponent,
-//       },
-//       {
-//         path: '',
-//         redirectTo: 'tabla',
-//         pathMatch: 'full',
-//       },
-//     ],
-//   },
-//   {
-//     path: 'guardiacivil',
-//     canActivate: [roleGuard],
-//     data: { role: '4' },
-//     component: ContenidoComponent, // O el componente que corresponda
+        component: DashboardComponent,
+        data: { role: '2' }
+      }
+    ]
+  },
+  {
+    path: 'embarcaciones',
+    canActivate: [roleGuard],
+    data: { role: '2' },
+    component: ContenidoComponent,
+    children: [
+      {
+        path: 'tabla',
+        component: TablaComponent,
+      },
+      {
+        path: 'formulario',
+        component: FormularioEmbarcacionComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'tabla',
+        pathMatch: 'full',
+      },
+    ],
+  },
+  {
+    path: 'cliente',
+    canActivate: [roleGuard],
+    data: { role: '6' },
+    component: InicioComponent,
+    children: [
+      {
+        path: 'inicio',
+        component: InicioComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'inicio',
+        pathMatch: 'full',
+      },
+      {
+        path: 'misdatos',
+        component: DatosComponent,
+      },
+      {
+        path: 'mistarjetas',
+        component: MetodosPagoComponent,
+      },
+      {
+        path: 'misembarcaciones',
+        component: MisembarcacionesComponent,
+      },
+      {
+        path: 'misservicios',
+        component: MisserviciosComponent,
+      },
+      {
+        path: 'servicio',
+        component: FichaservicioComponent,
+      },
+      {
+        path: 'cesta',
+        component: CestaComponent,
+      },
+   
+    ],
+  },
 
-//     children: [
-//       {
+  {
+    path: 'plazabase',
+    canActivate: [roleGuard],
+    data: { role: '2' },
+    component: ContenidoComponent,
+    children: [
+      {
+        path: 'tabla',
+        component: TablaPbComponent,
+      },
+      {
+        path: 'formulario',
+        component: FormularioPbComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'tabla',
+        pathMatch: 'full',
+      },
+    ],
+  },
+  {
+    path: 'transito',
+    canActivate: [roleGuard],
+    data: { role: '2' },
+    component: ContenidoComponent,
+    children: [
+      {
+        path: 'tabla',
+        component: TablaTransitoComponent,
+      },
+      {
+        path: 'formulario',
+        component: FormularioTransitoComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'tabla',
+        pathMatch: 'full',
+      },
+    ],
+  },
+  {
+    path: 'guardiacivil',
+    canActivate: [roleGuard],
+    data: { role: '4' },
+    component: ContenidoComponent, // O el componente que corresponda
 
-//         path: '',
+    children: [
+      {
 
-//         component: TablaGuardiaComponent
-//       }
-//     ]
-//   },
-//   {
-//     path: 'notificaciones',
-//     canActivate: [roleGuard],
-//     data: { role: '2' },
-//     component: ContenidoComponent, // O el componente que corresponda
-//     children: [
-//       {
-//         path: '',
-//         component: NotificacionesComponent,
-//       },
-//     ],
-//   },
-//   {
-//     path: 'movil',
-//     canActivate: [roleGuard],
-//     data: { role: '3' },
-//     component: PlantillaGuardamuellesComponent, 
-//     children: [
-//       { path: '', component: ListaCardsComponent },
-//     { path: 'card-incidencia', component: CardIncidenciaComponent },
-//       { path: 'card-confirmacion-transito', component: CardConfirmacionTransitoComponent },
-//     ]
-//   },
-//   {
-//     path: '**',
-//     component: ErrorHandlerComponent,
-//    //  redirectTo: '/login' //Por eso redirigia al login. Doble asterisco es para cualquier ruta que no exista.
-//   }
-// ];
+        path: '',
+
+        component: TablaGuardiaComponent
+      }
+    ]
+  },
+  {
+    path: 'notificaciones',
+    canActivate: [roleGuard],
+    data: { role: '2' },
+    component: ContenidoComponent, // O el componente que corresponda
+    children: [
+      {
+        path: '',
+        component: NotificacionesComponent,
+      },
+    ],
+  },
+  {
+    path: 'movil',
+    canActivate: [roleGuard],
+    data: { role: '3' },
+    component: PlantillaGuardamuellesComponent, 
+    children: [
+      { path: '', component: ListaCardsComponent },
+    { path: 'card-incidencia', component: CardIncidenciaComponent },
+      { path: 'card-confirmacion-transito', component: CardConfirmacionTransitoComponent },
+    ]
+  },
+  {
+    path: '**',
+    component: ErrorHandlerComponent,
+   //  redirectTo: '/login' //Por eso redirigia al login. Doble asterisco es para cualquier ruta que no exista.
+  }
+];
 @NgModule({
   imports: [
-    // RouterModule.forRoot(routes)
-  ],
+     RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

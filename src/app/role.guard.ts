@@ -23,6 +23,9 @@ export const roleGuard: CanActivateFn = (route:ActivatedRouteSnapshot, state: Ro
       case '4':
         inject(Router).navigate(['guardiacivil']);
         break;
+        case '6':
+          inject(Router).navigate(['cliente']);
+          break;
       default:
         inject(Router).navigate(['login']);
         break;
