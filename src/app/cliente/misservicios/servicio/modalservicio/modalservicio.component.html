@@ -1,34 +1,11 @@
-<!-- 
 
- 
-  <div mat-dialog-content class="modal-body details">
-  
-    <div class="details-body">
-      
-      <div class="bodyleft">
-        <h2 class="info">Ticket</h2>
-        <div class="line"></div> 
-        <p><span class="label">Número de ticket: </span>jjj</p>
-
-        <div class="line"></div>
-        <p><span class="label">Tipo de embarcación:</span>0</p>
-        <p><span class="label">Modelo:</span>t</p>
-        <p><span class="label">Matrícula:</span>ccc</p>
-        <div class="line"></div>
-        <p><span class="label">Origen:</span> tt</p>
-
-      </div>
-     
-    </div>
-  </div>
- -->
 <div mat-dialog-content class="modal-body details">
   <div class="details-body">
     <div class="ticket-section">
       <h2 class="info">Ticket</h2>
       <div class="ticket-info">
         <div class="line"></div>
-        <p><span class="especial">Número de ticket:</span> 123456</p>
+        <p><span class="especial">Número de ticket:</span> {{ servicio.Ticket_Numero }}</p>
         <div class="line"></div>
       </div>
     </div>
@@ -37,22 +14,22 @@
       <div class="description">
         <h2 class="info">Descripción</h2>
         <div class="line"></div>
-        <p><span class="label">Servicio:</span></p>
-        <p><span class="label">Precio:</span></p>
+        <p><span class="label">Servicio {{ servicio.Servicio }} :</span> </p>
+        <p><span class="label">Gastos de gestion:</span></p>
       </div>
     </div>
     <div class="price-container">
       <div class="price">
         <h2 class="info">Precio</h2>
         <div class="line"></div>
-        <p class="label">20,00€</p>
-        <p class="label">1,50€</p>
+        <p class="label">{{ servicio.Ticket_Total }}</p>
+        <p class="label">{{ servicio.Gastos }}</p>
       </div>
     </div>
     </div>
     <div class="ticket-section">
       <div class="line"></div>
-      <p><span class="especial">Total:</span>21,50€</p>
+      <p><span class="especial">Total:</span>{{ servicio.Ticket_Total }}</p>
     </div>
   </div>
 </div>

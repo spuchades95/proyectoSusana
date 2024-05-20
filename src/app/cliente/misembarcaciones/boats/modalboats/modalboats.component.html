@@ -1,25 +1,19 @@
-
-
- 
-  <div mat-dialog-content class="modal-body details">
-    
-    <div class="details-body">
-      <div class="bodyleft">
-        <p><span class="label">Nombre:</span>jjj</p>
-        <p><span class="label">Tipo de embarcación:</span>0</p>
-        <p><span class="label">Modelo:</span>t</p>
-        <p><span class="label">Matrícula:</span>ccc</p>
-        <p><span class="label">Origen:</span> tt</p>
-        <p><span class="label">Nº Registro:</span> jjj</p>
-      </div>
-      <div class="bodyrigth">
-        <p><span class="label">Nombre:</span>wwww</p>
-        <p><span class="label">Tipo de embarcación:</span> tttt</p>
-        <p><span class="label">Modelo:</span> ggg</p>
-        <p><span class="label">Matrícula:</span></p>
-        <p><span class="label">Origen:</span>rr</p>
-        <p><span class="label">Nº Registro:</span> q/p</p>
-      </div>
+<div mat-dialog-content class="modal-body details">
+  <div class="details-body">
+    <div class="bodyleft">
+      <p><span class="label">Nombre: </span>{{ boatData.NombreBarco }}</p>
+      <p><span class="label">Tipo de embarcación: </span>{{ boatData.TipoBarco }}</p>
+      <p><span class="label">Modelo: </span>{{ boatData.Modelo }}</p>
+      <p><span class="label">Matrícula: </span>{{ boatData.Matricula }}</p>
+      <p><span class="label">Origen: </span>{{ boatData.Origen }}</p>
+      <p><span class="label">Nº Registro: </span>{{ boatData.NumeroPlaza }}</p>
+    </div>
+    <div class="bodyrigth">
+      <p><span class="label">Eslora: </span>{{ boatData.Eslora }}</p>
+      <p><span class="label">Manga: </span>{{ boatData.Manga }}</p>
+      <p><span class="label">Amarre: </span>{{ boatData.Plaza }}</p>
+      <p><span class="label">Fecha de Entrada: </span>{{ boatData.FechaInicio }}</p>
+      <p><span class="label">Fecha de Finalización de Contrato: </span>{{ boatData.FechaFinalizacion }}</p>
     </div>
   </div>
-
+</div>

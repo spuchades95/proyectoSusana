@@ -8,8 +8,40 @@
     font-weight: 400;
     line-height: normal;
     margin-top: 25px;
+  }.account-navigation {
+    margin-top: 37px;
+    margin-left: 78px;
+    margin-bottom: 31px;
+    position: relative;
   }
-   
+  .izquierdaT {
+    color: var(--Wedgewood-950, #1d2834);
+    /* H4 Lorem ipsum dolor */
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 55px;
+    margin-left: 78px;
+    margin-bottom: 35px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  .account-details {
+    margin-left: 78px;
+    margin-bottom: 25px;
+  }
+  .perfil {
+    color: var(--Wedgewood-950, #1d2834);
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
   .Label-f {
     color: var(--Wedgewood-950, #1d2834);
     /* H4 Lorem ipsum dolor */

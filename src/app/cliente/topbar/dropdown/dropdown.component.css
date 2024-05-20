@@ -56,6 +56,10 @@
 .services-list {
   margin-top: 10px; /* Espacio entre el título y la lista de servicios */
 }
+
+.services-list a {
+  z-index: 1000; /* O cualquier otro valor que sea mayor que el z-index de otros elementos */
+}
 .title{
 text-decoration: none;
 cursor: text;

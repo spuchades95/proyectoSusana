@@ -20,8 +20,6 @@ export class FormularioPbComponent implements OnInit {
   modoVista: boolean = true;
   modoEdicion: boolean = false;
   editarFechaFinalizacion: boolean = false;
-
-
   plazaBSeleccionada: any = {    };
   idLocalStorage: any;
   data: any;
@@ -41,7 +39,7 @@ export class FormularioPbComponent implements OnInit {
   titular: string = '';
   minDate: string | null = null;
   minDateActualizada: string | null = null;
-
+  clientes: any[] = [];
   constructor(
     private sharedDataService: SharedDataService,
     private activatedRoute: ActivatedRoute,
@@ -83,7 +81,7 @@ export class FormularioPbComponent implements OnInit {
         (response: any) => {
           console.log(response)
           console.log(this.selectedEmbarcacion)
-          this.titular = response.titular;
+          this.titular = response;
           console.log(this.titular)
         },
         (error) => {
@@ -192,7 +190,13 @@ export class FormularioPbComponent implements OnInit {
       console.log(embarcaciones);
     });
     this.validarFechaFinalizacion();
-
+    this.apiService.getClientes().subscribe(response => {
+      const cliente = response.data;
+      this.clientes = cliente;
+      
+      console.log(cliente);
+      console.log(cliente.nombre);
+    });
     this.activatedRoute.queryParams.subscribe((params) => {
       const tipo = params['tipo'];
       this.mostrarVacio = tipo === 'vacio';

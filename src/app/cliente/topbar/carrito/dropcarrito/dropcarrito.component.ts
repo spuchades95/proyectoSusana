@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dropcarrito',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./dropcarrito.component.css']
 })
 export class DropcarritoComponent {
-
+  @Input() datosSeleccionados: any[] = [];
 }

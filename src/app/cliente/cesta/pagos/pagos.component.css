@@ -67,18 +67,7 @@ a {
   align-items: center;
   margin-bottom: 30px;
 }
-/* 
-.rectangle {
-  width: 750px;
-  height: 196px;
-  background: #d0dce7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
+
 .content-container {
   display: flex;
   justify-content: space-between;
@@ -86,18 +75,17 @@ a {
   padding: 0 20px;
   width: 100%;
   margin-top: 30px;
-} 
+}
 .rectangle {
   width: 750px;
   height: 196px;
-  background: #D0DCE7;
+  background: #d0dce7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-
 }
 
 .content-container {
-  padding-left : 20px;
+  padding-left: 20px;
 }
 
 .selectmet {
@@ -105,7 +93,6 @@ a {
   font-size: 20px;
   font-family: Questrial;
   font-weight: 400;
-
   padding-top: 20px;
   padding-left: 25px;
 }
@@ -121,29 +108,33 @@ a {
 }
 
 .card-details {
-  width: 100%;
-  max-width: 500px;
-  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .owner-expiry {
   margin-left: 10px;
 }
-.card-info {
+.card-info,
+.owner-expiry {
   display: flex;
   align-items: center;
 }
-
+.expiry-date {
+  color: var(--Wedgewood-600, #426787);
+  font-family: Questrial;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 60px;
+}
 .plus {
   margin-left: 10px;
   width: 40px;
   height: 40px;
 }
-/* .card-info,
-.owner-expiry {
-  display: flex;
-  align-items: center;
-} */
+
 .card-number {
   margin-left: 10px;
   color: var(--Input-Color, #000);
@@ -171,7 +162,6 @@ a {
 }
 .card-label {
   color: #000;
-
   /* H4 Lorem ipsum dolor */
   font-family: Questrial;
   font-size: 20px;
@@ -189,7 +179,6 @@ a {
   font-weight: 400;
 }
 .content {
- margin-top: -10px;
- margin-left: 50px;
+  margin-top: -10px;
+  margin-left: 35px;
 }
-

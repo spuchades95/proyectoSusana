@@ -9,61 +9,22 @@
       </div>
     </div>
   </div>
-
-  <!-- Cards -->
-  <div class="row">
-    <!-- Primera fila de "cards" -->
-    <div class="col-md-3">
-      <div class="card">
-        vvvvv
-        <!-- Contenido de la primera "card" -->
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        uu
-        <!-- Contenido de la segunda "card" -->
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        ioi
-        <!-- Contenido de la tercera "card" -->
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        pp
-        <!-- Contenido de la cuarta "card" -->
+  <div class="carousel-container">
+    <div id="carousel" class="carousel">
+      <div class="card-container">
+        <div (click)="seleccionarServicio(servicio)" *ngFor="let servicio of servicios" class="card">
+          <img  [src]="servicio.imageUrl" alt="{{ servicio.Nombre }}" />
+          <div class="card-overlay"></div>
+          <div class="card-body">
+            <h5 class="card-title">{{ servicio.Nombre }}</h5>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Segunda fila de "cards" -->
-  <div class="row">
-    <div class="col-md-3">
-      <div class="card">
-        4444
-        <!-- Contenido de la quinta "card" -->
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        74
-        <!-- Contenido de la sexta "card" -->
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        47
-        <!-- Contenido de la séptima "card" -->
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        99
-        <!-- Contenido de la octava "card" -->
-      </div>
-    </div>
+  <div class="button-container">
+    <button class="botones" (mouseover)="scrollLeft()">Atrás</button>
+    <button class="botones" (mouseover)="scrollRight()">Siguiente</button>
   </div>
 </div>

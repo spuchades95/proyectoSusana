@@ -1,0 +1,18 @@
+
+<div class="credit-card-design">
+<div class="existing-card">
+    <div class="card-details">
+      <div class="card-info">
+        <img src="assets/img/creditcard.svg" class="plus" />
+        <p class="card-number"> {{ getNumeroFormateado() }}</p>
+        <div (click)="eliminarTarjeta(idTarjeta)">
+          <img src="assets/img/dots.svg" class="dots" />
+        </div>
+      </div>
+      <div class="owner-expiry">
+        <p class="owner">Propietario: {{ cliente }}</p>
+        <p class="expiry-date">Expira el {{ fechaCaducidad }}</p>
+      </div>
+    </div>
+  </div>
+</div>

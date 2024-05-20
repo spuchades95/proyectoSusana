@@ -1,8 +1,8 @@
 export interface dialogoserrvicio {
-    numeroticket: string;
-    servicio: string;
-    total:string;
-    gastos:string;
+    Ticket_Numero: string;
+    Servicio: string;
+    Ticket_Total:string;
+    Gastos?:string;
    
    
 }

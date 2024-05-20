@@ -6,7 +6,6 @@
       <div class="account-navigation">
         <a class="izquierdaT">Inicio/</a> <span class="perfil">Mi perfil</span>
         <app-lateral></app-lateral>
-       
       </div>
     </div>
 
@@ -15,63 +14,77 @@
       <br />
       <div class="welcome-message">
         <h3 class="wmesa">Te damos la bienvenida a tu cuenta de usuario</h3>
-        <h4 class="wmesa">Hola  {{ fullname }}</h4>
+        <h4 class="wmesa">Hola {{ newNombre }}</h4>
       </div>
 
       <div class="account-details">
-        <form class="formacount">
+        <form class="formacount" (ngSubmit)="actualizarDatos()">
           <div class="formLeft">
             <div class="mb-3 d-flex">
               <label class="Label-f">Nombre:</label>
-              <input type="text" class="" />
+              <input type="text" [(ngModel)]="newNombre" name="newNombre" />
             </div>
             <div class="mb-3 d-flex">
               <label class="Label-f">Cumpleaños</label>
-              <input type="date" class="" />
+              <input
+                type="date"
+                [(ngModel)]="fechaNacimiento"
+                name="fechaNacimiento"
+              />
             </div>
           </div>
           <div class="formRight">
             <div class="mb-3 d-flex">
               <label class="Label-f">Género:</label>
-              <select>
-                <option value="value1">Femenino</option>
-                <option value="value2" selected>Femenino</option>
-                <option value="value3">Femenino</option>
-
-
+              <select [(ngModel)]="newGenero" name="genero">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
               </select>
-        
             </div>
-            <button class="btn guarda">GUARDAR</button>
+            <div class="button-container">
+              <button type="submit" class="btn guarda">GUARDAR</button>
+            </div>
           </div>
-
         </form>
       </div>
 
       <div class="contact-details">
         <div>
           <hr />
-          <form>
-          <label class="MedioT">CORREO</label>
-          <div>x@example.com</div>
-          <button class="btn camb">CAMBIAR</button>
-        </form>
+          <form (ngSubmit)="actualizarCorreo()">
+            <label class="MedioT">CORREO</label>
+            <div>
+              <input [(ngModel)]="newEmail" name="newEmail" type="text" />
+            </div>
+            <button type="submit" class="btn camb">CAMBIAR</button>
+          </form>
         </div>
         <div>
           <hr />
-          <form>
-          <label class="MedioT">TELÉFONO</label>
-          <div>999999999</div>
-          <button class="btn camb">CAMBIAR</button>
-        </form>
+          <form (ngSubmit)="actualizarTelefono()">
+            <label class="MedioT">TELÉFONO</label>
+            <div>
+              <input [(ngModel)]="newTelefono" name="newTelefono" type="text" />
+            </div>
+            <button type="submit" class="btn camb">CAMBIAR</button>
+          </form>
         </div>
         <div>
           <hr />
-          <form>
-          <label class="MedioT">CONTRASEÑA</label>
-          <div>********************</div>
-          <button class="btn camb">CAMBIAR</button>
-        </form>
+          <form (ngSubmit)="actualizarContra()">
+            <label class="MedioT">CONTRASEÑA</label>
+            <div>
+              <input
+                type="password"
+                placeholder="*********"
+                name="newPassword"
+                [(ngModel)]="newPassword"
+                required
+              />
+            </div>
+            <button type="submit" class="btn camb">CAMBIAR</button>
+          </form>
         </div>
       </div>
     </div>

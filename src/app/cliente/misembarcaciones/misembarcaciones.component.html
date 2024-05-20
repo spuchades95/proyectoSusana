@@ -15,9 +15,26 @@
      <div class="Info">Embarcaciones</div>
      
       <br />
-   
-         <app-boats></app-boats>
-     
+    
+      <ng-container *ngIf="tieneBarcos">
+        <ng-container *ngFor="let barco of barcos">
+         <app-boats
+         [idbarco]="barco.id"
+         [Origen]="barco.Origen"
+         [Matricula]="barco.Matricula"
+         [TipoBarco]="barco.TipoBarco"
+         [NombreBarco]="barco.NombreBarco"
+         [Manga]="barco.Manga"
+         [Eslora]="barco.Eslora"
+         [Modelo]="barco.Modelo"
+         [NumeroPlaza]="barco.NumeroPlaza"
+         [FechaInicio]="barco.FechaInicio"     
+         [FechaFinalizacion]="barco.FechaFinalizacion"
+         [Plaza]="barco.Plaza"
+       
+         ></app-boats>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </div>

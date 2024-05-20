@@ -1,14 +1,11 @@
-
-    <div class="background">
-        <div class="triangle"></div>
-    <div class="dropdown-container">
-        <p class="link"><span >Hola</span> {{ fullname }}</p>
-        <div class="line"></div>
-        <a class="link" href="#">Mis Datos</a>
-        <a class="link" href="#">Mis Embarcaciones</a>
-        <a class="link" href="#">Mis Servicios</a>
-        <a class="link" href="#" (click)="logout()">Cerrar sesión</a>
-     
-    </div>
-
+<div class="background">
+  <div class="triangle"></div>
+  <div class="dropdown-container">
+    <p class="link"><span>Hola</span> {{ fullname }}</p>
+    <div class="line"></div>
+    <a class="link" routerLink="/cliente/misdatos">Mis Datos</a>
+    <a class="link" routerLink="/cliente/misembarcaciones">Mis Embarcaciones</a>
+    <a class="link" routerLink="/cliente/misservicios">Mis Servicios</a>
+    <a class="link" href="" (click)="logout()">Cerrar sesión</a>
+  </div>
 </div>

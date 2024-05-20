@@ -25,8 +25,14 @@ import { TarjetaComponent } from './cesta/tarjeta/tarjeta.component';
 import { BarcoComponent } from './cesta/barco/barco.component';
 import { PagosComponent } from './cesta/pagos/pagos.component';
 import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
-
-
+import { AppRoutingModule } from '../app-routing.module';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FormsModule } from '@angular/forms';
+import { ExistetarjetaComponent } from './metodos-pago/existetarjeta/existetarjeta.component';
+import { ServicioscanceladosComponent } from './servicioscancelados/servicioscancelados.component';
+import { CestitaComponent } from './topbar/carrito/dropcarrito/cestita/cestita.component';
+import { ResumenPedidoPagoComponent } from './cesta/resumen-pedido-pago/resumen-pedido-pago.component';
+import { ServiciosSeleccionadosComponent } from './cesta/servicios-seleccionados/servicios-seleccionados.component';
 
 
 @NgModule({
@@ -56,11 +62,18 @@ import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
     BarcoComponent,
     PagosComponent,
     ServicestaComponent,
-    
+    ExistetarjetaComponent,
+    ServicioscanceladosComponent,
+    CestitaComponent,
+    ResumenPedidoPagoComponent,
+    ServiciosSeleccionadosComponent,
+  
+  
    
   ],
   imports: [
-    CommonModule
+    CommonModule,  SlickCarouselModule,FormsModule,
+    AppRoutingModule,
   ],
   exports: [ FichaservicioComponent, MetodosPagoComponent, MisembarcacionesComponent, MisserviciosComponent,DatosComponent,CestaComponent,PagosComponent,InicioComponent]
 })

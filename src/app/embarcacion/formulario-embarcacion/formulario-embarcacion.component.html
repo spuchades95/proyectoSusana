@@ -51,12 +51,12 @@
         </div>
         <div class="mb-3 d-flex">
           <label for="titular" class="form-label">Titular:</label>
-          <input
-            name="Titular"
-            type="text"
-            class="form-control mt-4"
-            placeholder="Titular"
-          />
+
+          <select class="form-control mt-4" name="Titular">
+            <option *ngFor="let cliente of clientes" [value]="cliente.id">
+              {{ cliente.nombre }}
+            </option>
+          </select>
         </div>
       </div>
       <div class="formRight">
@@ -189,14 +189,16 @@
         </div>
         <div class="mb-3 d-flex">
           <label for="titular" class="form-label">Titular:</label>
-          <input
+          <select
             name="Titular"
-            type="text"
             class="form-control mt-4"
-            placeholder="Titular"
             [(ngModel)]="embarcacionSeleccionada.Titular"
-            [readOnly]="!modoEdicion"
-          />
+            [disabled]="!modoEdicion"
+          >
+            <option *ngFor="let cliente of clientes" [value]="cliente.id">
+              {{ cliente.nombre }}
+            </option>
+          </select>
         </div>
         <div class="mb-3 d-flex">
           <label for="eslora" class="form-label">Eslora:</label>
@@ -209,10 +211,9 @@
             [readOnly]="!modoEdicion"
           />
         </div>
-
       </div>
       <div class="formRight">
-                <div class="mb-3 d-flex">
+        <div class="mb-3 d-flex">
           <label for="manga" class="form-label">Manga:</label>
           <input
             name="Manga"
@@ -269,10 +270,7 @@
         </div> -->
         <div class="d-flex justify-content-center">
           <img
-            [src]="
-              
-              '/assets/img/embarcaciones/image-outline.svg'
-            "
+            [src]="'/assets/img/embarcaciones/image-outline.svg'"
             alt=""
             class="imgEmb"
           />

@@ -49,7 +49,9 @@ line-height: normal;
 margin-left: 210px;
 text-decoration: underline;
 }
-
+.cestaCont{
+  height: auto;
+}
 .cesta{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -91,4 +93,5 @@ text-decoration-thickness: 3px;
   .contenedordelacesta{
     margin-top: 35px;
     margin-left: 190px;
+  
   }

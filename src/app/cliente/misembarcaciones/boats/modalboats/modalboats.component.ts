@@ -8,14 +8,14 @@ import { MatDialogModule } from '@angular/material/dialog';
   styleUrls: ['./modalboats.component.css']
 })
 export class ModalboatsComponent {
-  formData: dialogomodal;
+  boatData: dialogomodal;
 
   constructor(
     public dialogRef: MatDialogRef<ModalboatsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: dialogomodal 
   ) {
-    this.formData = { ...data }; 
+    this.boatData = { ...data }; 
   }
 
- 
+
 }
