@@ -7,56 +7,123 @@
         <a class="izquierdaT">Inicio/</a> <span class="perfil">Pagos</span>
       </div>
       <div class="contenedordelacesta">
-        <div class="group-container">
-          <div class="rectangle">
-            <p class="selectmet">
-              Este servicio se realizará en esta embarcación:
-            </p>
-            <div class="content-container">
-              <div class="add-card">
-                <div class="content">
-                  <p class="card-label">
-                    Nombre: <span class="card-label">dddd</span>
-                  </p>
-                  <p class="card-label">
-                    Tipo: <span class="card-data">dd</span>
-                  </p>
-                  <p class="card-label">
-                    Matrícula: <span class="card-data">k</span>
-                  </p>
-                  <p class="card-label">
-                    Origen: <span class="card-data">h</span>
-                  </p>
+        <form (submit)="realizarPago()">
+          <div class="group-container">
+            <div class="rectangle">
+              <label class="selectmet">Seleccione su embarcación:</label>
+              <select (change)="seleccionarEmbarcacion($event)">
+                <option *ngFor="let barco of barcos" [value]="barco.id">
+                  {{ barco.NombreBarco }}
+                </option>
+              </select>
+              <div class="content-container">
+                <div *ngIf="embarcacionSeleccionada" class="add-card">
+                  <div class="content">
+                    <p class="card-label">
+                      Nombre:
+                      <span class="card-data">{{
+                        embarcacionSeleccionada.NombreBarco
+                      }}</span>
+                    </p>
+                    <p class="card-label">
+                      Tipo:
+                      <span class="card-data">{{
+                        embarcacionSeleccionada.TipoBarco
+                      }}</span>
+                    </p>
+                    <p class="card-label">
+                      Matrícula:
+                      <span class="card-data">{{
+                        embarcacionSeleccionada.Matricula
+                      }}</span>
+                    </p>
+                    <p class="card-label">
+                      Origen:
+                      <span class="card-data">{{
+                        embarcacionSeleccionada.Origen
+                      }}</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="group-container">
-          <div class="rectangle">
-            <p class="selectmet">Seleccione su método de pago</p>
-            <div class="content-container">
-              <div class="card-details">
-                <div class="card-info">
-                  <img src="assets/img/creditcard.svg" class="plus" />
-                  <p class="card-number">**** **** **** 3456</p>
-                </div>
-                <div class="owner-expiry">
-                  <p class="owner">Propietario: José Ramón García</p>
+          <div class="group-container">
+            <div class="rectangle">
+              <label class="selectmet">Seleccione su método de pago:</label>
+              <select (change)="seleccionarMetodoDePago($event)">
+                <option *ngFor="let metodo of tarjetas" [value]="metodo.id">
+                  {{ metodo.numero_tarjeta }} - {{ metodo.nombre_tarjeta }}
+                </option>
+              </select>
+              <div class="content-container">
+                <div *ngIf="metodoDePagoSeleccionado" class="card-details">
+                  <div class="card-info">
+                    <img src="assets/img/creditcard.svg" class="plus" />
+                    <p class="card-number">
+                      {{ metodoDePagoSeleccionado.numero_tarjeta }}
+                    </p>
+                    <div class="owner-expiry">
+                      <p class="owner"></p>
+
+                      <p class="owner">
+                        Propietario:
+                        {{ metodoDePagoSeleccionado.nombre_tarjeta }}
+                      </p>
+                      <p class="expiry-date">
+                        Expira el
+                        {{ metodoDePagoSeleccionado.fecha_expiracion }}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <app-servicesta></app-servicesta>
+          <app-servicios-seleccionados
+            [serviciosSeleccionados]="serviciosParaPagar"
+            (servicioEliminado)="eliminarServicio($event)"
+          ></app-servicios-seleccionados>
+          <div class="group-container">
+            <div class="content-container">
+              <div class="botones">
+                <button type="submit" class="btn boton">Pagar</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
 
     <div class="col-md-4">
       <div class="patata">
-        <app-resumenpedido></app-resumenpedido>
+        <div class="resumen-pedido">
+          <div class="background">
+            <div class="content">
+              <h2 class="title">Resumen del pedido</h2>
+              <div class="item" *ngFor="let servicio of serviciosParaPagar">
+                <p class="label">{{ servicio.nombre }}</p>
+                <span class="value">{{ servicio.precio }}€</span>
+              </div>
+
+              <div class="item">
+                <p class="label">Gastos de gestión</p>
+                <span class="value">{{ gastosGestion }}€</span>
+              </div>
+              <div class="total">
+                <p class="label-t">Total :</p>
+                <span class="value-t">{{ total }}</span>
+              </div>
+              <div class="item">
+                <span class="letrita">
+                  El IVA del 21% se aplicará al total de tu pedido.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

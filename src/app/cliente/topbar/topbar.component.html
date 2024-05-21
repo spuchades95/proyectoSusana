@@ -1,12 +1,13 @@
 <nav class="topbar">
-  <img alt="Logo portos de galicia" src="/assets/img/Group.svg" class="logo" />
+  <img routerLink="/cliente/inicio" alt="Logo portos de galicia" src="/assets/img/Group.svg" class="logo" />
 
-  <form>
+  <form (submit)="search()">
     <input
       class="buscador"
       placeholder="Buscando..."
       type="text"
       name="busca"
+      [(ngModel)]="searchTerm"
     />
   </form>
   <div class="right">

@@ -2,22 +2,18 @@
   <div class="background">
     <div class="content">
       <h2 class="title">Resumen del pedido</h2>
-      <div class="item">
-        <p class="label">Total de servicios ¡</p>
-        <span class="value">20,00€</span>
+      <div class="item" *ngFor="let servicio of serviciosParaPagar">
+        <p class="label">{{ servicio.nombre }}</p>
+        <span class="value">{{ servicio.precio }}€</span>
       </div>
-  
-      <div class="item">
-        <p class="label">Descuento total</p>
-        <span class="value">0,00€</span>
-      </div>
+   
       <div class="item">
         <p class="label">Gastos de gestión</p>
-        <span class="value">1,50€</span>
+        <span class="value">{{ gastosGestion.toFixed(2) }}€</span>
       </div>
       <div class="total">
         <p class="label-t">Total :</p>
-        <span class="value-t">21,50€</span>
+        <span class="value-t">{{ total.toFixed(2) }}€</span>
       </div>
       <div class="item">
         <span class="letrita">
@@ -25,8 +21,7 @@
         </span>
       </div>
       <div class="botones">
-        <button class="btn boton" (click)="realizarPago()" [disabled]="!botonPagoActivado">Ir al pago</button>
-
+        <button class="btn boton" (click)="realizarPago()" [disabled]="!serviciosParaPagar.length">Ir al pago</button>
       </div>
     </div>
   </div>

@@ -1,0 +1,28 @@
+<div class="resumen-pedido">
+    <div class="background">
+      <div class="content">
+        <h2 class="title">Resumen del pedido</h2>
+        <div class="item" *ngFor="let servicio of serviciosParaPagar">
+          <p class="label">{{ servicio.nombre }}</p>
+          <span class="value">{{ servicio.precio }}€</span>
+        </div>
+     
+        <div class="item">
+          <p class="label">Gastos de gestión</p>
+          <span class="value">{{ gastosGestion.toFixed(2) }}€</span>
+        </div>
+        <div class="total">
+          <p class="label-t">Total :</p>
+          <span class="value-t">€</span>
+        </div>
+        <div class="item">
+          <span class="letrita">
+            El IVA del 21% se aplicará al total de tu pedido.
+          </span>
+        </div>
+        <div class="botones">
+          <button class="btn boton" >Pagar</button>
+        </div>
+      </div>
+    </div>
+  </div>

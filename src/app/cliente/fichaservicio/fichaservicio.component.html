@@ -1,15 +1,14 @@
 <app-topbar></app-topbar>
 
 <div class="container">
-  <form class="formacount">
+  <form class="formacount" (submit)="agregarALaCesta()">
     <div class="formLeft">
-      <img class="image" src="https://via.placeholder.com/500x700" />
+      <img [src]="servicio.imageUrl" alt="{{ servicio.Nombre }}" />
     </div>
     <div class="formRight">
-      <h1 class="title">REPOSTAJE</h1>
+      <h1 class="title">{{ servicio.Nombre }}</h1>
       <p class="description">
-        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-        suscipit laboriosam, nisi ut al
+        {{ servicio.Descripcion }}
       </p>
 
       <div class="priceSection">
@@ -25,42 +24,44 @@
             <div class="centra">
               <input
                 type="radio"
-                name="nombre"
+                name="optionPrice"
                 class="optionPrice"
-                value="150"
+                [value]="servicio.Precio_mensual"
+                (change)="precioSeleccionado = servicio.Precio_mensual"
               />
-              <span class="optionPriceText"> 150</span>
+
+              <span class="optionPriceText">
+                {{ servicio.Precio_mensual }}</span
+              >
             </div>
           </div>
           <div class="additionalInfo">
-            <p class="infoItem">Se factura automáticamente cada mes.</p>
-            <p class="infoItem">
-              Ahorra un 25% en comparación con la opción de pago único.
-            </p>
+            <p class="infoItem">{{ servicio.Mensaje_mensual }}</p>
           </div>
         </div>
         <div class="option">
           <div class="optionContent">
             <label class="optionTitle">Una vez</label>
             <div class="centra">
-              <input type="radio" name="nombre" class="optionPrice" value="c" />
-              <span class="optionPriceText"> 20</span>
+              <input
+                type="radio"
+                name="optionPrice"
+                class="optionPrice"
+                [value]="servicio.Precio_unico"
+                (change)="precioSeleccionado = servicio.Precio_unico"
+              />
+
+              <span class="optionPriceText"> {{ servicio.Precio_unico }}</span>
             </div>
           </div>
           <div class="additionalInfo">
-            <p class="infoItem">Pago único por el servicio de repostaje</p>
-
-          
-            <p class="infoItem">
-              Ideal para aquellos que necesitan repostar de forma esporádica o
-              puntual.
-            </p>
+            <p class="infoItem">{{ servicio.Mensaje_unico }}</p>
           </div>
         </div>
       </div>
       <div class="buttons">
         <button class="button addToCart">AÑADIR A LA CESTA</button>
-        <button class="button contractNow">CONTRATALO YA</button>
+        <button class="button contractNow" (click)="contratarAhora()">CONTRATALO YA</button>
       </div>
     </div>
   </form>

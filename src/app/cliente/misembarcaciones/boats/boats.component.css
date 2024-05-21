@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .add-card {
@@ -15,7 +16,6 @@
 }
 .card-label {
   color: #000;
-
   /* H4 Lorem ipsum dolor */
   font-family: Questrial;
   font-size: 20px;
@@ -25,7 +25,6 @@
 }
 .card-data {
   color: #000;
-
   text-align: center;
   /* P Lorem ipsim dolor */
   font-family: Inter;
@@ -36,21 +35,17 @@
 .content {
   padding: 25px;
 }
-.last-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-.link{
+
+.link {
   background: none;
   border: none;
-  color: var(--Wedgewood-950, #1D2834);
+  color: var(--Wedgewood-950, #1d2834);
   font-family: Questrial;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  align-self: flex-end; 
+  align-self: flex-end;
   margin: 10px;
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   text-decoration: underline; /* Subraya el texto */

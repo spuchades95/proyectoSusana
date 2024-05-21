@@ -1,24 +1,16 @@
 <div class="credit-card-design">
   <div class="add-card">
     <div class="content">
-      <p class="card-label">Nombre: <span class="card-label">dddd</span></p>
-      <p class="card-label">Tipo: <span class="card-data">dd</span></p>
+      <p class="card-label">Nombre: <span class="card-label">{{ NombreBarco }}</span></p>
+      <p class="card-label">Tipo: <span class="card-data">{{ TipoBarco }}</span></p>
       <p class="card-label">
-        Matrícula: <span class="card-data">{{ boatData.matricula }}</span>
+        Matrícula: <span class="card-data">{{ Matricula }}</span>
       </p>
       <p class="card-label">
-        Origen: <span class="card-data">{{ boatData.origen }}</span>
-     
+        Origen: <span class="card-data">{{ Origen }}</span>
       </p>
-    
     </div>
- 
   </div>
- 
 
-
- 
- <button class="link" (click)="openModal()">Ver detalles</button>
-
-
+  <button class="link" (click)="openModal(boatData)">Ver detalles</button>
 </div>

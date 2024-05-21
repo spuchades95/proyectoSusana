@@ -1,9 +1,10 @@
 <div class="recomendaciones">
     <h2 class="title">También te puede interesar:</h2>
     <div class="images-container">
-      <img class="image" src="https://via.placeholder.com/218x131" />
-      <img class="image" src="https://via.placeholder.com/218x131" />
-      <img class="image" src="https://via.placeholder.com/218x131" />
+    
+
+      <img (click)="seleccionarServicio(servicio)"  *ngFor="let servicio of servicios" class="image" [src]="servicio.imageUrl" alt="" />
+    
       
     </div>
   </div>

@@ -28,8 +28,10 @@ import { MisserviciosComponent } from './cliente/misservicios/misservicios.compo
 import { InicioComponent } from './cliente/inicio/inicio.component';
 import { CestaComponent } from './cliente/cesta/cesta.component';
 import { FichaservicioComponent } from './cliente/fichaservicio/fichaservicio.component';
-
-
+import { TopbarComponent } from './cliente/topbar/topbar.component';
+import { AddtarjetasComponent } from './cliente/metodos-pago/addtarjetas/addtarjetas.component';
+import { PagosComponent } from './cliente/cesta/pagos/pagos.component';
+import { ServicioscanceladosComponent } from './cliente/servicioscancelados/servicioscancelados.component';
 
 // Se importan los componentes que se van a utilizar en las rutas
 // Se definen las rutas de la aplicación
@@ -86,42 +88,54 @@ const routes: Routes = [
     path: 'cliente',
     canActivate: [roleGuard],
     data: { role: '6' },
-    component: InicioComponent,
-    children: [
-      {
-        path: 'inicio',
-        component: InicioComponent,
-      },
-      {
-        path: '',
-        redirectTo: 'inicio',
-        pathMatch: 'full',
-      },
-      {
-        path: 'misdatos',
-        component: DatosComponent,
-      },
-      {
-        path: 'mistarjetas',
-        component: MetodosPagoComponent,
-      },
-      {
-        path: 'misembarcaciones',
-        component: MisembarcacionesComponent,
-      },
-      {
-        path: 'misservicios',
-        component: MisserviciosComponent,
-      },
-      {
-        path: 'servicio',
-        component: FichaservicioComponent,
-      },
-      {
-        path: 'cesta',
-        component: CestaComponent,
-      },
-   
+    //component: TopbarComponent,
+       children: [
+        {
+          path: '',
+          redirectTo: 'inicio',
+          pathMatch: 'full',
+        },
+        {
+          path: 'misdatos',
+          component: DatosComponent,
+        },
+        {
+          path: 'pagos',
+          component: MetodosPagoComponent,
+        },
+        {
+          path: 'addtarjeta',
+          component: AddtarjetasComponent,
+        },
+
+        {
+          path: 'misembarcaciones',
+          component: MisembarcacionesComponent,
+        },
+        {
+          path: 'misservicios',
+          component: MisserviciosComponent,
+        },
+        {
+          path: 'misservicioscancelados',
+          component: ServicioscanceladosComponent,
+        },
+        {
+          path: 'servicio/:id',
+          component: FichaservicioComponent,
+        },
+        {
+          path: 'cesta',
+          component: CestaComponent,
+        },
+        {
+          path: 'cestapagos',
+          component: PagosComponent,
+        },
+        {
+          path: 'inicio',
+          component: InicioComponent,
+        },
     ],
   },
 

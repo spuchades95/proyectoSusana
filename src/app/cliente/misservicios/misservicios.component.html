@@ -4,27 +4,32 @@
   <div class="row">
     <div class="col-md-3">
       <div class="account-navigation">
-        <a class="izquierdaT">Inicio/</a> <span class="perfil">Mis servicios</span>
-       
-       <app-lateral></app-lateral>
+        <a class="izquierdaT">Inicio/</a>
+        <span class="perfil">Mis servicios</span>
+
+        <app-lateral></app-lateral>
       </div>
     </div>
 
     <div class="col-md-9">
-
-
-
-        
       <div class="Info">Servicios</div>
-     
+
       <br />
-      <p class="service"> Mis Servicios</p>
-       <app-servicio></app-servicio>
-       <br />
-       <app-servicio></app-servicio>
-       <br />
-       <app-servicio></app-servicio>
-     
+      <p class="service">Mis Servicios </p> 
+      <ng-container *ngIf="tieneServicios">
+        <ng-container *ngFor="let servicio of servicios">
+          <app-servicio
+          [id]="servicio.id"
+          [Estado]="servicio.Estado"
+          [Servicio]="servicio.Servicio"
+          [FechaContratacion]="servicio.FechaContratacion"
+          [Imagen]="servicio.Imagen"
+          [Ticket_Numero]="servicio.Ticket_Numero"
+          [Ticket_Total]="servicio.Ticket_Total"
+          (actualizaEstado)="actualizarListaServicios($event)"  
+          ></app-servicio>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </div>

@@ -6,7 +6,7 @@
       <a class="title">SERVICIOS </a> 
       <div class="line"></div> 
       <div class="services-list"> 
-        <a *ngFor="let servicio of servicios" href="#">{{ servicio }}</a>
+        <a *ngFor="let servicio of servicios" (click)="seleccionarServicio(servicio)"   [routerLink]="['/cliente/servicio', servicio.id]">{{ servicio.Nombre }}</a>
       </div>
     </div>
   </div>

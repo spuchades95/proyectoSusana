@@ -1,14 +1,14 @@
 export interface dialogomodal {
-    nombre: string;
-    tipo: string;
-    matricula:string;
-    origen:string;
-    manga: string;
-    eslora: string;
-    modelo: string;
-    registro:string;
-    fechaentrada:string;
-    fechafincontrato: string;
-    amarre: string;
+    NombreBarco: string;
+    TipoBarco: string;
+    Matricula:string;
+    Origen:string;
+    Manga: string;
+    Eslora: string;
+    Modelo: string;
+    NumeroPlaza:string;
+    FechaInicio:string;
+    FechaFinalizacion: string;
+    Plaza: string;
    
 }

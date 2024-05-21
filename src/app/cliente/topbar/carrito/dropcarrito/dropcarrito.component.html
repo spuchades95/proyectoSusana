@@ -1,11 +1,11 @@
-
 <div class="background">
-    <div class="triangle"></div>
-<div class="dropdown-container">
-    <p class="cestito">Mi cesta </p>
+  <div class="triangle"></div>
+  <div class="dropdown-container">
+    <p class="cestito">Mi cesta</p>
     <div class="line"></div>
 
- <a> VER MI CESTA</a>
-</div>
+    <app-cestita [datosSeleccionados]="datosSeleccionados"></app-cestita>
 
+    <a [routerLink]="['/cliente/cesta']"class="btn boton"> VER MI CESTA</a>
+  </div>
 </div>

@@ -1,0 +1,14 @@
+<div
+  (click)="eliminarDelCarrito(i)"
+  *ngFor="let item of datosSeleccionados; let i = index"
+  class="cestita"
+>
+  <div class="imagen-container">
+    <img class="imagen" [src]="obtenerImageUrl(item.imagen)" />
+  </div>
+  <div class="info">
+    <p class="nombre">{{ item.nombre }}</p>
+
+    <p class="precio">{{ item.precio }}€</p>
+  </div>
+</div>

@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tarjetas.component.css']
 })
 export class TarjetasComponent {
-  mostrarAgregar: boolean = false; // Por defecto, mostrar la plantilla de agregar tarjeta
 
-  // Método para cambiar entre las plantillas
-  cambiarVista() {
-    this.mostrarAgregar = !this.mostrarAgregar;
-  }
 }

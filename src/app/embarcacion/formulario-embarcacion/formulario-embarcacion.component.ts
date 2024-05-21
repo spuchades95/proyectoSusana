@@ -22,7 +22,7 @@ export class FormularioEmbarcacionComponent implements OnInit {
   modoEdicion: boolean = false; // Variable para modo de edición de formulario
   embarcacionSeleccionada: any = { datos_tecnicos: '' }; // Variable para almacenar la embarcación seleccionada. Se inicializa con un objeto vacío
   data: any; // Variable para almacenar datos
-
+  clientes: any[] = [];
   imagenSeleccionada: string | File | ArrayBuffer | null = null; // Variable para almacenar la imagen seleccionada
 
   // Método constructor para crear un objeto del componente
@@ -47,12 +47,21 @@ export class FormularioEmbarcacionComponent implements OnInit {
     if (!this.embarcacionSeleccionada.Imagen) {
       this.embarcacionSeleccionada.Imagen = '/assets/img/embarcaciones/image-outline.svg';
     }
+
+    
     // Suscripción a los parámetros de la ruta. Recibe el tipo de formulario a través de queryParams en la URL
     this.activatedRoute.queryParams.subscribe(params => {
       const tipo = params['tipo'];
       this.mostrarVacio = tipo === 'vacio';
 
     });
+
+    this.apiService.getClientes().subscribe(response => {
+      const cliente = response.data;
+      this.clientes = cliente;
+      console.log(cliente);
+    });
+
 
 
     // Suscripción a los datos compartidos. Recibe la embarcación seleccionada

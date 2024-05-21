@@ -1,19 +1,24 @@
 
 <div class="rectangle"  (click)="openModal()">
-  <img class="imgservice" src="https://via.placeholder.com/65x59" />
+  <img [src]="imageUrl" class="img" alt="{{ Servicio }}" />
   <div class="info">
     <p class="servi">
-        Servicio: <span class="service">Limpieza</span>
+        Servicio: <span class="service">{{ Servicio }}</span>
       </p>
       <p class="servi">
-        Contratado: <span class="service">01/03/2024</span>
+        Contratado: <span class="service">{{ FechaContratacion }}</span>
       </p>
 </div>
     <div class="right-column">
       <p class="servi">Estado:
-      <span class="service">{{ status }}</span>
+      <span class="service">{{ Estado }}</span>
       <img [src]="statusImageUrl" class="status-image" /></p>
+      <ng-container *ngIf="EstadoActivo">
+        <div (click)="actualizaestado(id)">
       <a class="drop"> Dar de baja <img src="assets/img/stop.svg" /> </a>
+    </div>
+    </ng-container>
+ 
     </div>
      
 

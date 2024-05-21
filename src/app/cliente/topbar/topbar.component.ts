@@ -2,35 +2,53 @@ import { Component, Input } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
 import { TokenService } from 'src/app/shared/token.service';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api/api.service';
+import { SharedDataService } from 'src/app/services/shared-data/shared-data.service';
 
 @Component({
- // standalone:true,
+  // standalone:true,
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.css']
+  styleUrls: ['./topbar.component.css'],
 })
 export class TopbarComponent {
-
-  name: string = this.capitalizeFirstLetter(localStorage.getItem('name') || 'Usuario');
-  role = localStorage.getItem('role') || null;
+  searchTerm: string = '';
+  services: any[] = [];
+  serviciosFiltrados: any[] = [];
   showDropUser: boolean = false;
 
   handleDropdownToggle(showDropUser: boolean) {
     this.showDropUser = showDropUser;
   }
-  constructor(private authService: AuthService, private router: Router, private tokenService: TokenService) { }
-
-  logout() {
-
-    this.tokenService.removeToken();
-
-    this.router.navigate(['/login']);
-  }
-  private capitalizeFirstLetter(name: string): string {
-    return name.charAt(0).toUpperCase() + name.slice(1);
+  constructor(
+    private apiService: ApiService,
+    private sharedDataService: SharedDataService,
+    private router: Router
+  ) {
+    this.loadServices();
   }
 
+  loadServices(): void {
+    this.apiService.getServicios().subscribe((response: any) => {
+      this.services = response;
 
+      console.log(this.services);
+    });
+  }
 
+  search(): void {
+    if (this.searchTerm.trim() !== '') {
+      this.serviciosFiltrados = this.services.filter((servicio) =>
+        servicio.Nombre.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+      if (this.serviciosFiltrados.length === 1) {
+        const servicioSeleccionado = this.serviciosFiltrados[0];
+        this.sharedDataService.setData('servicioSeleccionado', servicioSeleccionado);
+        this.router.navigate(['/cliente/servicio', servicioSeleccionado.id]);
+      }
+    }
+  }
+
+ 
 
 }

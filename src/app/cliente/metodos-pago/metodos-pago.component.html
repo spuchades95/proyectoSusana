@@ -4,23 +4,26 @@
   <div class="row">
     <div class="col-md-3">
       <div class="account-navigation">
-        <a class="izquierdaT">Inicio/</a> <span class="perfil">Métodos de pago</span>
-       
-       <app-lateral></app-lateral>
+        <a class="izquierdaT">Inicio/</a>
+        <span class="perfil">Métodos de pago</span>
+
+        <app-lateral></app-lateral>
       </div>
     </div>
 
     <div class="col-md-9">
-
-
-
-        <app-addtarjetas></app-addtarjetas>
-      <!-- <div class="Info">Métodos de pago</div>
-     
-      <br />
-      <p class="guardi"> Métodos de pago guardados:</p> -->
-         <!-- <app-tarjetas></app-tarjetas> -->
-     
+      <app-tarjetas></app-tarjetas>
+      <ng-container *ngIf="tieneTarjetas">
+        <ng-container *ngFor="let tarjeta of tarjetas">
+          <app-existetarjeta  
+            [idTarjeta]="tarjeta.id"
+            [numero]="tarjeta.numero_tarjeta"
+            [fechaCaducidad]="tarjeta.fecha_expiracion"
+            [cliente]="tarjeta.nombre_tarjeta"
+            (tarjetaEliminada)="actualizarListaTarjetas($event)"
+          ></app-existetarjeta>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </div>

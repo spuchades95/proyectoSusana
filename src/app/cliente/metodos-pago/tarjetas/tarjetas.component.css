@@ -13,6 +13,18 @@
   display: flex;
   align-items: center;
 }
+.Info {
+  color: var(--Wedgewood-950, #1d2834);
+
+  /* H1 Lorem ipsim dolor */
+  font-family: Questrial;
+  font-size: 39.063px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 25px;
+}
+
 .owner {
   color: var(--Wedgewood-400, #769cba);
   font-family: Questrial;

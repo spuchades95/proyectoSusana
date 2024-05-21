@@ -23,7 +23,7 @@ export class DropuserComponent {
   }
   private capitalizeFirstLetter(name: string): string {
     return name.charAt(0).toUpperCase() + name.slice(1);
-    console.log(this.fullname);
+
   }
  
 }

@@ -17,8 +17,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/auth.interceptor';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { ClienteModule } from './cliente/cliente.module';
+
+
+
 @NgModule({
-  declarations: [AppComponent, ErrorHandlerComponent],
+  declarations: [AppComponent, ErrorHandlerComponent,],
 
   imports: [
     BrowserModule,
@@ -36,8 +39,7 @@ import { ClienteModule } from './cliente/cliente.module';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    ClienteModule,
-
+    ClienteModule
   ],
 
   providers: [ {

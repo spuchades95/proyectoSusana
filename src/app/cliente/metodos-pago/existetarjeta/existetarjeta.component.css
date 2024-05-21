@@ -1,0 +1,90 @@
+.credit-card-design {
+    width: 547px;
+    height: 88px;
+    background: rgba(217, 217, 217, 0);
+    border-radius: 5px;
+    border: 1px #1d2834 solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .add-card {
+    display: flex;
+    align-items: center;
+  }
+  .Info {
+    color: var(--Wedgewood-950, #1d2834);
+  
+    /* H1 Lorem ipsim dolor */
+    font-family: Questrial;
+    font-size: 39.063px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 25px;
+  }
+  
+  .owner {
+    color: var(--Wedgewood-400, #769cba);
+    font-family: Questrial;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 53px;
+  }
+  .guardi {
+    color: #1d2834;
+    font-size: 16px;
+    font-family: Questrial;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  .expiry-date {
+    color: var(--Wedgewood-600, #426787);
+    font-family: Questrial;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 60px;
+  }
+  
+  .ccard {
+    width: 40px;
+    height: 40px;
+    margin-left: 180px;
+  }
+  
+  .dots {
+    width: 40px;
+    height: 40px;
+    margin-left: 280px;
+    cursor: pointer; 
+  }
+  
+  .card-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .owner-expiry {
+    margin-left: 10px; 
+  }
+  
+  .plus {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  .card-info,
+  .owner-expiry {
+    display: flex;
+    align-items: center; 
+  }
+  .card-number {
+    margin-left: 10px;
+  }
+  

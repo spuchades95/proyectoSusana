@@ -67,18 +67,7 @@ a {
   align-items: center;
   margin-bottom: 30px;
 }
-/* 
-.rectangle {
-  width: 750px;
-  height: 196px;
-  background: #d0dce7;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
+
 .content-container {
   display: flex;
   justify-content: space-between;
@@ -86,18 +75,17 @@ a {
   padding: 0 20px;
   width: 100%;
   margin-top: 30px;
-} 
+}
 .rectangle {
   width: 750px;
   height: 196px;
-  background: #D0DCE7;
+  background: #d0dce7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-
 }
 
 .content-container {
-  padding-left : 20px;
+  padding-left: 20px;
 }
 
 .selectmet {
@@ -105,7 +93,6 @@ a {
   font-size: 20px;
   font-family: Questrial;
   font-weight: 400;
-
   padding-top: 20px;
   padding-left: 25px;
 }
@@ -121,29 +108,33 @@ a {
 }
 
 .card-details {
-  width: 100%;
-  max-width: 500px;
-  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .owner-expiry {
   margin-left: 10px;
 }
-.card-info {
+.card-info,
+.owner-expiry {
   display: flex;
   align-items: center;
 }
-
+.expiry-date {
+  color: var(--Wedgewood-600, #426787);
+  font-family: Questrial;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 60px;
+}
 .plus {
   margin-left: 10px;
   width: 40px;
   height: 40px;
 }
-/* .card-info,
-.owner-expiry {
-  display: flex;
-  align-items: center;
-} */
+
 .card-number {
   margin-left: 10px;
   color: var(--Input-Color, #000);
@@ -171,7 +162,6 @@ a {
 }
 .card-label {
   color: #000;
-
   /* H4 Lorem ipsum dolor */
   font-family: Questrial;
   font-size: 20px;
@@ -189,7 +179,109 @@ a {
   font-weight: 400;
 }
 .content {
- margin-top: -10px;
- margin-left: 50px;
+  margin:auto;
+}
+.resumen-pedido {
+  width: 349px;
+  height: auto;
+  border-radius: 10px;
+  background: #eaeff4;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.label-t {
+  font-family: Questrial;
+  font-size: 31.25px;
+  font-weight: 400;
+  color: black;
+  flex: 1;
+  text-align: center;
+}
+.value-t {
+  font-family: Questrial;
+  font-size: 31.25px;
+  font-weight: 400;
+  color: black;
+  flex: 1;
+  text-align: center;
+}  
+.background {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-family: Questrial;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  flex: 1;
+}
+
+.value {
+  font-family: Questrial;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  flex: 1;
+  text-align: center;
+}
+.boton {
+  border-radius: 3.279px;
+  background: var(--Golden-Tainoi-500, #f98f07);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 36.721px;
+  color: var(--Golden-Tainoi-50, #fffaeb);
+  text-align: center;
+
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 190px;
+}
+.letrita {
+  color: var(--Wedgewood-300, #a6bed3);
+
+  font-family: Questrial;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.title {
+  color: var(--Wedgewood-950, #1d2834);
+  text-align: center;
+  /* H4 Lorem ipsum dolor */
+  -webkit-text-stroke: 1.5px var(----Wedgewood-950, #1d2834);
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
