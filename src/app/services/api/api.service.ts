@@ -59,6 +59,11 @@ export class ApiService {
     return this.http.post(url, data);
   }
 
+  postSolicita(data: any): Observable<any> {
+    const url = `${this.apiUrl}solicita`;
+    return this.http.post(url, data);
+  }
+
   postTicket(data: any): Observable<any> {
     const url = `${this.apiUrl}ticket`;
     return this.http.post(url, data);
@@ -84,9 +89,6 @@ export class ApiService {
     return this.http.get(url);
   }
 
-
-
-
   getServiceOfClient(userId: number): Observable<any> {
     const url = `${this.apiUrl}servicios/${userId}/all`;
     return this.http.get(url);
@@ -96,7 +98,6 @@ export class ApiService {
     const url = `${this.apiUrl}servicios/${userId}/allcancel`;
     return this.http.get(url);
   }
-
 
   getClientes(): Observable<any> {
     const url = `${this.apiUrl}cliente`;
