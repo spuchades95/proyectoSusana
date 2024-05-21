@@ -54,6 +54,15 @@ export class ApiService {
     return this.http.put(url, data);
   }
 
+  postHire(data: any): Observable<any> {
+    const url = `${this.apiUrl}pedidos`;
+    return this.http.post(url, data);
+  }
+
+  postTicket(data: any): Observable<any> {
+    const url = `${this.apiUrl}ticket`;
+    return this.http.post(url, data);
+  }
 
   deleteTarjetaPorId(id: number): Observable<any> {
     const url = `${this.apiUrl}tarjetas/${id}`;

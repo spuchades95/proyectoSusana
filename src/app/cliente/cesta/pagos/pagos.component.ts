@@ -1,7 +1,8 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
-import { SharedDataService } from 'src/app/services/shared-data/shared-data.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { now } from 'jquery';
+
 @Component({
   selector: 'app-pagos',
   templateUrl: './pagos.component.html',
@@ -14,30 +15,30 @@ export class PagosComponent implements OnInit {
   embarcacionSeleccionada: any;
   metodoDePagoSeleccionado: any;
   serviciosParaPagar: any[] = [];
-  gastosGestion: number = 1.5;
+  gastosGestion: number = 1.50;
   total: number = 0;
 
   @Output() actualizarTotal: EventEmitter<number> = new EventEmitter<number>();
+
   constructor(
     private apiService: ApiService,
-    private router: Router,
-    private sharedDataService: SharedDataService
+    private router: Router
   ) {
     this.idLocalStorage = localStorage.getItem('clienteId');
   }
+
   ngOnInit() {
     this.obtenerEmbarcaciones();
     this.obtenerMetodosDePago();
     this.obtenerServiciosParaPagar();
+    console.log(this.serviciosParaPagar );
   }
 
   obtenerMetodosDePago() {
-    this.apiService
-      .getCardsByIdUser(this.idLocalStorage)
-      .subscribe((response: any) => {
-        this.tarjetas = response.data;
-        console.log(this.tarjetas);
-      });
+    this.apiService.getCardsByIdUser(this.idLocalStorage).subscribe((response: any) => {
+      this.tarjetas = response.data;
+      console.log(this.tarjetas);
+    });
   }
 
   obtenerEmbarcaciones() {
@@ -46,19 +47,27 @@ export class PagosComponent implements OnInit {
       console.log(this.barcos);
     });
   }
+
   obtenerServiciosParaPagar() {
     const servicios = localStorage.getItem('serviciosParaPagar');
     if (servicios) {
-      this.serviciosParaPagar = JSON.parse(servicios);
+      this.serviciosParaPagar = JSON.parse(servicios).map((servicio: { precio: any; }) => ({
+        ...servicio,
+        precio: Number(servicio.precio) 
+      }));
       this.calcularTotal();
     }
   }
+
   calcularTotal() {
-    this.total = this.serviciosParaPagar.reduce(
-      (acc, servicio) => acc + servicio.precio,
-      this.gastosGestion
+    const totalServicios = this.serviciosParaPagar.reduce(
+      (acc, servicio) => acc + Number(servicio.precio),
+      0
     );
+    this.total = totalServicios + Number(this.gastosGestion);
+    console.log(this.total);
   }
+
   seleccionarEmbarcacion(event: any) {
     const embarcacionId = event.target.value;
     this.embarcacionSeleccionada = this.barcos.find(
@@ -72,19 +81,41 @@ export class PagosComponent implements OnInit {
       (metodo) => metodo.id === parseInt(metodoId, 10)
     );
   }
+
   eliminarServicio(index: number) {
     this.serviciosParaPagar.splice(index, 1);
     this.calcularTotal();
-    this.actualizarTotal.emit(this.total); // Emitir el evento para notificar el cambio de total
+    this.actualizarTotal.emit(this.total); 
   }
+
   realizarPago() {
     const pagoData = {
       embarcacion: this.embarcacionSeleccionada,
       metodoDePago: this.metodoDePagoSeleccionado,
       servicios: this.serviciosParaPagar,
-      total: this.total,
+  
     };
-    console.log('Realizando pago con los datos:', pagoData);
-    // Aquí enviarías pagoData a tu API para realizar el pago
+
+    const pagoTicket = {
+      Total: this.total,
+      Estado: 'Pagado',
+      FechaEmision: now(),
+      Tarjeta_id: this.metodoDePagoSeleccionado.id,
+    };
+    const servicioBarco={
+
+      
+    }
+
+console.log(pagoTicket);
+
+    // this.apiService.postHire(pagoData).subscribe(
+    //   response => {
+    //     console.log('Pago realizado con éxito:', response);
+    //   },
+    //   error => {
+    //     console.error('Error al realizar el pago:', error);
+    //   }
+    // );
   }
 }

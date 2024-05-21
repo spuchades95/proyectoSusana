@@ -7,7 +7,7 @@
         <a class="izquierdaT">Inicio/</a> <span class="perfil">Pagos</span>
       </div>
       <div class="contenedordelacesta">
-        <form (ngSubmit)="realizarPago()">
+        <form (submit)="realizarPago()">
           <div class="group-container">
             <div class="rectangle">
               <label class="selectmet">Seleccione su embarcación:</label>
@@ -86,18 +86,44 @@
             [serviciosSeleccionados]="serviciosParaPagar"
             (servicioEliminado)="eliminarServicio($event)"
           ></app-servicios-seleccionados>
+          <div class="group-container">
+            <div class="content-container">
+              <div class="botones">
+                <button type="submit" class="btn boton">Pagar</button>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
 
     <div class="col-md-4">
       <div class="patata">
-        <app-resumen-pedido-pago
-        [serviciosParaPagar]="serviciosParaPagar"
-        [gastosGestion]="gastosGestion"
-        [totalServicios]="total"
-        (realizarPago)="realizarPago()"
-      ></app-resumen-pedido-pago>
+        <div class="resumen-pedido">
+          <div class="background">
+            <div class="content">
+              <h2 class="title">Resumen del pedido</h2>
+              <div class="item" *ngFor="let servicio of serviciosParaPagar">
+                <p class="label">{{ servicio.nombre }}</p>
+                <span class="value">{{ servicio.precio }}€</span>
+              </div>
+
+              <div class="item">
+                <p class="label">Gastos de gestión</p>
+                <span class="value">{{ gastosGestion }}€</span>
+              </div>
+              <div class="total">
+                <p class="label-t">Total :</p>
+                <span class="value-t">{{ total }}</span>
+              </div>
+              <div class="item">
+                <span class="letrita">
+                  El IVA del 21% se aplicará al total de tu pedido.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
