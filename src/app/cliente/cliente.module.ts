@@ -22,7 +22,7 @@ import { CestaComponent } from './cesta/cesta.component';
 import { ResumenpedidoComponent } from './cesta/resumenpedido/resumenpedido.component';
 import { RecomendacionesComponent } from './cesta/recomendaciones/recomendaciones.component';
 import { TarjetaComponent } from './cesta/tarjeta/tarjeta.component';
-import { BarcoComponent } from './cesta/barco/barco.component';
+
 import { PagosComponent } from './cesta/pagos/pagos.component';
 import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
 import { AppRoutingModule } from '../app-routing.module';
@@ -58,7 +58,7 @@ import { ServiciosSeleccionadosComponent } from './cesta/servicios-seleccionados
     ResumenpedidoComponent,
     RecomendacionesComponent,
     TarjetaComponent,
-    BarcoComponent,
+   
     PagosComponent,
     ServicestaComponent,
     ExistetarjetaComponent,

@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="account-navigation">
-        <a class="izquierdaT">Inicio/</a> <span class="perfil">Cesta</span>
+        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a> <span class="perfil">Cesta</span>
       </div>
       <div class="contenedordelacesta">
         <div class="cestaCont">
@@ -26,10 +26,6 @@
     </div>
     <div class="col-md-4">
       <div class="patata">
-        <p class="link">
-          <img alt="boat" src="/assets/img/boat.svg" class="boat" /> fffff
-          <a class="link-e">Editar</a>
-        </p>
         <app-resumenpedido
           [serviciosParaPagar]="serviciosParaPagar"
         ></app-resumenpedido>

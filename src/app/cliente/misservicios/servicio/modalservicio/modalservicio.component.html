@@ -14,22 +14,21 @@
       <div class="description">
         <h2 class="info">Descripción</h2>
         <div class="line"></div>
-        <p><span class="label">Servicio {{ servicio.Servicio }} :</span> </p>
-        <p><span class="label">Gastos de gestion:</span></p>
+        <p><span class="label">Servicio: {{ servicio.Servicio }} </span> </p>
+       
       </div>
     </div>
     <div class="price-container">
       <div class="price">
-        <h2 class="info">Precio</h2>
+        <h2 class="info">Precio: </h2>
         <div class="line"></div>
-        <p class="label">{{ servicio.Ticket_Total }}</p>
-        <p class="label">{{ servicio.Gastos }}</p>
-      </div>
+        <p class="label">{{ servicio.Ticket_Total }} €</p>
+     </div>
     </div>
     </div>
     <div class="ticket-section">
       <div class="line"></div>
-      <p><span class="especial">Total:</span>{{ servicio.Ticket_Total }}</p>
+      <p><span class="especial">Total: </span>{{ servicio.Ticket_Total }} €</p>
     </div>
   </div>
 </div>

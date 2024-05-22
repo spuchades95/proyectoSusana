@@ -26,7 +26,6 @@ export class DatosComponent {
       .subscribe((response) => {
         const cliente = response.data;
         this.clienteInfo = cliente;
-        console.log(this.clienteInfo);
         this.newEmail = cliente.email;
         this.newGenero = cliente.genero;
         const fechaNacimientoISO = new Date(cliente.fecha_nacimiento)
@@ -36,8 +35,7 @@ export class DatosComponent {
         this.fechaNacimiento = fechaNacimientoISO;
         this.clienteId = cliente.id;
         this.newTelefono = cliente.Telefono;
-        console.log(cliente.fecha_nacimiento);
-        this.newNombre = cliente.nombre;
+       this.newNombre = cliente.nombre;
       });
   }
 

@@ -15,7 +15,7 @@
       <img [src]="statusImageUrl" class="status-image" /></p>
       <ng-container *ngIf="EstadoActivo">
         <div (click)="actualizaestado(id)">
-      <a class="drop"> Dar de baja <img src="assets/img/stop.svg" /> </a>
+      <a data-toggle="tooltip" data-placement="top" title="Cancelar servicio" class="drop"> Dar de baja <img src="assets/img/stop.svg" /> </a>
     </div>
     </ng-container>
  

@@ -4,36 +4,63 @@
   <div class="row">
     <div class="col-md-3">
       <div class="account-navigation">
-        <a class="izquierdaT">Inicio/</a> <span class="perfil">Métodos de pago</span>
-       
-       <app-lateral></app-lateral>
+        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a>
+        <span class="perfil">Métodos de pago</span>
+
+        <app-lateral></app-lateral>
       </div>
     </div>
 
-<div class="col-md-9">
-  <div class="Info">Añadir tarjeta de crédito/débito</div>
+    <div class="col-md-9">
+      <div class="Info">Añadir tarjeta de crédito/débito</div>
 
-  <br />
-  <form (ngSubmit)=" introduceTarjeta()"class="formacount">
-    <div class="formLeft">
-      <div class="mb-3 d-flex">
-        <label class="Label-f">Número de tarjeta:</label>
-        <input type="text" [(ngModel)]="NumeroTarjeta"  name="NumeroTarjeta" placeholder="Introduce el número" maxlength="10" pattern="[0-9]*" />
-      </div>
-      <div class="mb-3 d-flex">
-        <label class="Label-f">Nombre de tarjeta:</label>
-        <input type="text" [(ngModel)]="NombreTarjeta" name="NombreTarjeta" placeholder="Introduce el nombre" />
-      </div>
+      <br />
+      <form (ngSubmit)="introduceTarjeta()" class="formacount">
+        <div class="formLeft">
+          <div class="mb-3 d-flex">
+            <label class="Label-f">Número de tarjeta:</label>
+            <input
+              type="text"
+              [(ngModel)]="NumeroTarjeta"
+              name="NumeroTarjeta"
+              placeholder="Introduce el número"
+              maxlength="10"
+              pattern="[0-9]*"
+            />
+          </div>
+          <div class="mb-3 d-flex">
+            <label class="Label-f">Nombre de tarjeta:</label>
+            <input
+              type="text"
+              [(ngModel)]="NombreTarjeta"
+              name="NombreTarjeta"
+              placeholder="Introduce el nombre"
+            />
+          </div>
 
-      <div class="mb-3 d-flex">
-        <label class="Label-f">Vencimiento (MM/AA):</label>
-        <input type="month"  [(ngModel)]="FechaCaducidad" name="FechaCaducidad"  placeholder="Introduce una fecha" />
-      </div>
-      <div class="mb-3 d-flex">
-        <label class="Label-f">CVV:</label>
-        <input type="text"  [(ngModel)]="CVV" name="CVV" placeholder="Introduce el número" maxlength="3" pattern="[0-9]*" />
-      </div>
-      <button type="submit" class="btn camb">CONFIRMAR</button>
+          <div class="mb-3 d-flex">
+            <label class="Label-f">Vencimiento (MM/AA):</label>
+            <input
+              type="month"
+              [(ngModel)]="FechaCaducidad"
+              name="FechaCaducidad"
+              placeholder="Introduce una fecha"
+            />
+          </div>
+          <div class="mb-3 d-flex">
+            <label class="Label-f">CVV:</label>
+            <input
+              type="text"
+              [(ngModel)]="CVV"
+              name="CVV"
+              placeholder="Introduce el número"
+              maxlength="3"
+              pattern="[0-9]*"
+            />
+          </div>
+          <button type="submit" class="btn camb">CONFIRMAR</button>
+        </div>
+      </form>
     </div>
-  </form>
+  </div>
 </div>

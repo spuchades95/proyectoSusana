@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class ResumenpedidoComponent implements OnInit {
   @Input() serviciosParaPagar: any[] = [];
-  @Input() gastosGestion: number = 0;
+  @Input() gastosGestion: number = 1.50;
   @Input() totalServicios: number = 0;
 
   constructor(private router: Router) {}

@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-3">
       <div class="account-navigation">
-        <a class="izquierdaT">Inicio/</a> <span class="perfil">Mi perfil</span>
+        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a> <span class="perfil">Mi perfil</span>
         <app-lateral></app-lateral>
       </div>
     </div>
@@ -55,7 +55,7 @@
           <form (ngSubmit)="actualizarCorreo()">
             <label class="MedioT">CORREO</label>
             <div>
-              <input [(ngModel)]="newEmail" name="newEmail" type="text" />
+              <input [(ngModel)]="newEmail" name="newEmail" type="email"/>
             </div>
             <button type="submit" class="btn camb">CAMBIAR</button>
           </form>

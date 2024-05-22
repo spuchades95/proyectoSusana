@@ -28,8 +28,7 @@ export class PagosComponent implements OnInit {
     this.obtenerMetodosDePago();
     this.obtenerServiciosParaPagar();
     this.sacarfecha();
-    console.log(this.fecha);
-    console.log(this.serviciosParaPagar);
+
   }
 
   obtenerMetodosDePago() {

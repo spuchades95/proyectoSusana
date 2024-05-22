@@ -1,13 +1,13 @@
-import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalservicioComponent } from './modalservicio/modalservicio.component';
 import { ApiService } from 'src/app/services/api/api.service';
 @Component({
   selector: 'app-servicio',
   templateUrl: './servicio.component.html',
-  styleUrls: ['./servicio.component.css']
+  styleUrls: ['./servicio.component.css'],
 })
-export class ServicioComponent implements OnInit{
+export class ServicioComponent implements OnInit {
   @Input() id: any = '';
   @Input() Estado: any = '';
   @Input() Servicio: any = '';
@@ -20,20 +20,19 @@ export class ServicioComponent implements OnInit{
   @Output() actualizaEstado: EventEmitter<number> = new EventEmitter<number>();
   statusImageUrl: string = 'assets/img/inprocess.svg';
 
-  constructor(private dialog: MatDialog,private apiService: ApiService) { }
+  constructor(private dialog: MatDialog, private apiService: ApiService) {}
 
   ngOnInit(): void {
     this.filtrarPorEstado();
     this.cambiarImagenSegunEstado();
-    this.imageUrl= this.apiService.getImageUrl(this.Imagen);
-    console.log( this.imageUrl );
-
+    this.imageUrl = this.apiService.getImageUrl(this.Imagen);
+    console.log(this.imageUrl);
   }
   filtrarPorEstado(): void {
     if (this.Estado === 'Activo') {
-      this.EstadoActivo=true;
+      this.EstadoActivo = true;
     } else {
-      this.EstadoActivo=false;
+      this.EstadoActivo = false;
     }
   }
 
@@ -48,10 +47,9 @@ export class ServicioComponent implements OnInit{
       case 'Procesando':
         this.statusImageUrl = 'assets/img/inprocess.svg';
         break;
-        case 'Completado':
+      case 'Completado':
         this.statusImageUrl = 'assets/img/complete.svg';
         break;
-          
     }
   }
 
@@ -59,24 +57,24 @@ export class ServicioComponent implements OnInit{
     this.apiService.putEstadoCancelado(id).subscribe(
       () => {
         this.actualizaEstado.emit(id);
-        console.log(id);
       },
       (error) => {
-        console.log(id);
         console.error('Error al cancelar servicio:', error);
       }
     );
   }
 
-
   openModal(): void {
     const dialogRef = this.dialog.open(ModalservicioComponent, {
-      data: { /* aquí puedes pasar datos al modal si es necesario */ }
+      data: {
+        Servicio: this.Servicio,
+        Ticket_Numero: this.Ticket_Numero,
+        Ticket_Total: this.Ticket_Total,
+      },
     });
-  
-    dialogRef.afterClosed().subscribe(result => {
+
+    dialogRef.afterClosed().subscribe((result) => {
       console.log('Modal cerrado');
     });
   }
-
 }
