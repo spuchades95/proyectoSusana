@@ -15,8 +15,8 @@ export class ApiService {
   //private apiUrl = 'http://alum1.iesfsl.org/api/v1/';
   //private apiUrl = 'http://127.0.0.1:8000/api/v1/'; // URL de la API a la que se realizarán las peticiones
  // private serverUrl = 'http://localhost:8000';
-private apiUrl = 'http://54.225.180.98/api/v1/'; 
-private serverUrl ='http://54.225.180.98';
+private apiUrl = 'https://54.225.180.98/api/v1/'; 
+private serverUrl ='https://54.225.180.98';
   transitoId: any;
 
   constructor(
