@@ -11,7 +11,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class InicioComponent {
   servicios: any[] = [];
-
+  serverUrl = 'http://54.225.180.98';
   constructor(
     private apiService: ApiService,
     private sharedDataService: SharedDataService,
