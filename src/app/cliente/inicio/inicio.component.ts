@@ -22,8 +22,7 @@ export class InicioComponent {
     this.apiService.getServicios().subscribe(
       (data: any[]) => {
         this.servicios = data.map((servicio) => {
-          servicio.imageUrl = this.apiService.getImageUrl(servicio.Imagen);
-          console.log(servicio.imageUrl);
+         console.log(servicio.Imagen)
           return servicio;
         });
       },
