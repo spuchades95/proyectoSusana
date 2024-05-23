@@ -13,7 +13,7 @@
     <div id="carousel" class="carousel">
       <div class="card-container">
         <div (click)="seleccionarServicio(servicio)" *ngFor="let servicio of servicios" class="card">
-          <img [src]="servicio.Imagen" alt="{{ servicio.Nombre }}" />
+          <img  [src]="servicio.imageUrl" alt="{{ servicio.Nombre }}" />
           <div class="card-overlay"></div>
           <div class="card-body">
             <h5 class="card-title">{{ servicio.Nombre }}</h5>
