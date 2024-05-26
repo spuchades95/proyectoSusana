@@ -12,7 +12,7 @@ export class ChartComponent implements AfterViewInit {
 ngAfterViewInit(): void {
   this.apiService.getEstancia().subscribe(data => {
     const ctx = document.getElementById('ctx')as HTMLCanvasElement;
-    console.log(ctx);
+
     new Chart(ctx, {
       type: 'bar',
       data: {

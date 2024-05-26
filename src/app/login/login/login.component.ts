@@ -45,18 +45,9 @@ export class LoginComponent {
             .subscribe((response: any) => {
               const cliente = response.data;
               localStorage.setItem('clienteInfo', JSON.stringify(cliente));
-              console.log('ID del cliente:', cliente.id);
-              console.log('Género del cliente:', cliente.genero);
-              console.log('Nombre del cliente:', cliente.nombre);
-              console.log('Objeto del cliente:', cliente);
               localStorage.setItem('clienteId', cliente.id.toString());
             });
         });
-
-        console.log('Resultado del id:', result.user.id);
-        console.log('Resultado del usuario:', result.user.Rol_id);
-        console.log('Resultado del nombre:', result.user.NombreUsuario);
-        console.log('Resultado del nombre:', result.user.NombreCompleto);
         this.responseHandler(result);
 
         const token = this.token.getToken();

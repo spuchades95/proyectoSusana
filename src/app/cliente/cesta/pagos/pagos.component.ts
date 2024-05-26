@@ -28,7 +28,6 @@ export class PagosComponent implements OnInit {
     this.obtenerMetodosDePago();
     this.obtenerServiciosParaPagar();
     this.sacarfecha();
-
   }
 
   obtenerMetodosDePago() {
@@ -36,14 +35,12 @@ export class PagosComponent implements OnInit {
       .getCardsByIdUser(this.idLocalStorage)
       .subscribe((response: any) => {
         this.tarjetas = response.data;
-        console.log(this.tarjetas);
       });
   }
 
   obtenerEmbarcaciones() {
     this.apiService.getInfoBarcos(this.idLocalStorage).subscribe((data) => {
       this.barcos = data;
-      console.log(this.barcos);
     });
   }
 
@@ -66,7 +63,6 @@ export class PagosComponent implements OnInit {
       0
     );
     this.total = totalServicios + Number(this.gastosGestion);
-    console.log(this.total);
   }
 
   seleccionarEmbarcacion(event: any) {
@@ -100,6 +96,16 @@ export class PagosComponent implements OnInit {
     return fechafinalizacion.toISOString().substring(0, 10);
   }
   realizarPago() {
+    if (!this.embarcacionSeleccionada) {
+      alert('Por favor, seleccione una embarcación.');
+      return;
+    }
+
+    if (!this.metodoDePagoSeleccionado) {
+      alert('Por favor, seleccione un método de pago.');
+      return;
+    }
+
     const pagoTicket = {
       Total: this.total,
       Estado: 'Pagado',
@@ -136,29 +142,21 @@ export class PagosComponent implements OnInit {
         Embarcacion_id: this.embarcacionSeleccionada.id,
         FechaContratacion: this.fecha,
       };
-
       serviciosBarco.push(servicioBarco);
     });
 
-    console.log(pagoTicket);
     this.apiService
       .postTicket(pagoTicket)
       .pipe(
         switchMap((response) => {
-          console.log('Ticket:', response);
-
           return this.apiService.postHire(pedidos);
         }),
         switchMap((response) => {
-          console.log('Servicios contratados:', response);
-
           return this.apiService.postSolicita(serviciosBarco);
         })
       )
       .subscribe(
         (response) => {
-          console.log('compra completada:', response);
-
           const serviciosParaPagar = JSON.parse(
             localStorage.getItem('serviciosParaPagar') || '[]'
           );
@@ -175,13 +173,11 @@ export class PagosComponent implements OnInit {
             'serviciosParaPagar',
             JSON.stringify(serviciosRestantes)
           );
-
           localStorage.removeItem('datosSeleccionados');
-
           this.router.navigate(['/cliente/inicio']);
         },
         (error) => {
-          console.error('Error:', error);
+          console.error(error);
         }
       );
   }

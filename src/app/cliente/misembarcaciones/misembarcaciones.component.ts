@@ -14,18 +14,14 @@ export class MisembarcacionesComponent implements OnInit {
   embarcacionSeleccionada: any;
   constructor(
     private apiService: ApiService,
-    private router: Router,
-    private sharedDataService: SharedDataService
-  ) {
+   ) {
     this.idLocalStorage = localStorage.getItem('clienteId');
   }
   ngOnInit() {
-    console.log(this.idLocalStorage);
+
     this.apiService.getInfoBarcos(this.idLocalStorage).subscribe((response: any) => {
       this.barcos = response;
       this.tieneBarcos = this.barcos.length > 0;
-      console.log(this.tieneBarcos);
-      console.log(this.barcos);
   
     });
   

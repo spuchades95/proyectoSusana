@@ -26,7 +26,6 @@ export class ServicioComponent implements OnInit {
     this.filtrarPorEstado();
     this.cambiarImagenSegunEstado();
     this.imageUrl = this.apiService.getImageUrl(this.Imagen);
-    console.log(this.imageUrl);
   }
   filtrarPorEstado(): void {
     if (this.Estado === 'Activo') {
@@ -74,7 +73,7 @@ export class ServicioComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('Modal cerrado');
+
     });
   }
 }

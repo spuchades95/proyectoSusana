@@ -6,7 +6,7 @@
         <img src="assets/img/creditcard.svg" class="plus" />
         <p class="card-number"> {{ getNumeroFormateado() }}</p>
         <div (click)="eliminarTarjeta(idTarjeta)">
-          <img src="assets/img/dots.svg" class="dots" />
+          <img src="assets/img/dots.svg" class="dots" data-toggle="tooltip" data-placement="top" title="Elimina tarjeta"/>
         </div>
       </div>
       <div class="owner-expiry">

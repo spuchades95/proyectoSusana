@@ -19,13 +19,11 @@ export class ServicioscanceladosComponent implements OnInit {
     this.idLocalStorage = localStorage.getItem('clienteId');
   }
   ngOnInit() {
-    console.log(this.idLocalStorage);
+
     this.apiService.getServiceOfClientCanel(this.idLocalStorage).subscribe((response: any) => {
       this.servicios = response.data;
       this.tieneServicios = this.servicios.length > 0;
-      console.log(this.tieneServicios);
-      console.log(this.servicios);
-  
+   
     });
   
   }

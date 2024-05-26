@@ -23,12 +23,12 @@ export class InicioComponent {
       (data: any[]) => {
         this.servicios = data.map((servicio) => {
           servicio.imageUrl = this.apiService.getImageUrl(servicio.Imagen);
-          console.log(servicio.imageUrl);
+      
           return servicio;
         });
       },
       (error) => {
-        console.error('Error al obtener servicios: 65x69', error);
+        console.error(error);
       }
     );
   }
@@ -53,7 +53,6 @@ export class InicioComponent {
 
   seleccionarServicio(servicio: any) {
     this.sharedDataService.setData('servicioSeleccionado', servicio);
-
     this.router.navigate(['cliente/servicio', servicio.id]);
   }
 }

@@ -2,7 +2,9 @@
   <div class="details-body">
     <div class="bodyleft">
       <p><span class="label">Nombre: </span>{{ boatData.NombreBarco }}</p>
-      <p><span class="label">Tipo de embarcación: </span>{{ boatData.TipoBarco }}</p>
+      <p>
+        <span class="label">Tipo de embarcación: </span>{{ boatData.TipoBarco }}
+      </p>
       <p><span class="label">Modelo: </span>{{ boatData.Modelo }}</p>
       <p><span class="label">Matrícula: </span>{{ boatData.Matricula }}</p>
       <p><span class="label">Origen: </span>{{ boatData.Origen }}</p>
@@ -12,8 +14,14 @@
       <p><span class="label">Eslora: </span>{{ boatData.Eslora }}</p>
       <p><span class="label">Manga: </span>{{ boatData.Manga }}</p>
       <p><span class="label">Amarre: </span>{{ boatData.Plaza }}</p>
-      <p><span class="label">Fecha de Entrada: </span>{{ boatData.FechaInicio  }}</p>
-      <p><span class="label">Fecha de Finalización de Contrato: </span>{{ boatData.FechaFinalizacion }}</p>
+      <p>
+        <span class="label">Fecha de Entrada: </span
+        >{{ boatData.FechaInicio | date : "dd/MM/yyyy" }}
+      </p>
+      <p>
+        <span class="label">Fecha de Finalización de Contrato: </span
+        >{{ boatData.FechaFinalizacion | date : "dd/MM/yyyy" }}
+      </p>
     </div>
   </div>
 </div>

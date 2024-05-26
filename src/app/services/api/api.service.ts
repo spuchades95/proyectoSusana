@@ -223,68 +223,66 @@ private serverUrl ='http://54.225.180.98';
 
   getTitularEmbarcacion(embarcacionId: number): Observable<any[]> {
     const url = `${this.apiUrl}embarcacion/${embarcacionId}/titular`;
-    console.log(url + 'titu');
+
     return this.http.get<any>(url);
   }
 
   postAdministrativoAmarre(id: any, data: any): Observable<any> {
     const url = `${this.apiUrl}plazaBase/${id}/administrativoyAmarre`;
-    console.log(url);
-    console.log(data);
+ 
     return this.http.post(url, data);
   }
 
   postAlquiler(id: any, data: any): Observable<any> {
     const url = `${this.apiUrl}plazaBase/alquiler/${id}`;
-    console.log(url);
+
     return this.http.post(url, data);
   }
 
   putDisponibleOcupado(id: any, data?: any): Observable<any> {
     const url = `${this.apiUrl}plaza/${id}/actualizaEstadoOcupado`;
-    console.log(url);
+
     return this.http.put(url, data);
   }
 
   putEli(id: any, data?: any): Observable<any> {
     const url = `${this.apiUrl}plazaBase/${id}/eli`;
-    console.log(url);
-    return this.http.put(url, data);
+      return this.http.put(url, data);
   }
 
   putOcupadoDisponible(id: any, data?: any): Observable<any> {
     const url = `${this.apiUrl}plaza/${id}/actualizaEstadoDisponible`;
-    console.log(url);
+
     return this.http.put(url, data);
   }
 
   putActuaFin(id: any, data: any): Observable<any> {
     const url = `${this.apiUrl}plazaBase/${id}/actuFin`;
-    console.log(url);
+
     return this.http.put(url, data);
   }
 
   getInstalaciones(): Observable<any[]> {
     const url = `${this.apiUrl}instalacion`;
-    console.log(url);
+
     return this.http.get<any[]>(url);
   }
 
   getPantalanes(instalacionId: number): Observable<any> {
     const url = `${this.apiUrl}instalacion/${instalacionId}/pantalanes`;
-    console.log(url);
+
     return this.http.get<any>(url);
   }
 
   getAmarres(pantalanId: number): Observable<any> {
     const url = `${this.apiUrl}pantalan/${pantalanId}/amarres`;
-    console.log('GET request to:', url);
+   
     return this.http.get<any>(url);
   }
 
   getAmarresTransito(pantalanId: number): Observable<any> {
     const url = `${this.apiUrl}pantalan/${pantalanId}/amarrestr`;
-    console.log('GET request to:', url);
+
     return this.http.get<any>(url);
   }
 

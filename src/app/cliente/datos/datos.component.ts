@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
-
 
 @Component({
   selector: 'app-datos',
@@ -35,7 +34,7 @@ export class DatosComponent {
         this.fechaNacimiento = fechaNacimientoISO;
         this.clienteId = cliente.id;
         this.newTelefono = cliente.Telefono;
-       this.newNombre = cliente.nombre;
+        this.newNombre = cliente.nombre;
       });
   }
 
@@ -46,35 +45,31 @@ export class DatosComponent {
       FechaNacimiento: this.fechaNacimiento,
     };
 
-    this.apiService.putDatos(this.clienteId, data).subscribe((response) => {
-      console.log('Datos actualizados:', response);
-    });
+    this.apiService.putDatos(this.clienteId, data).subscribe((response) => {});
   }
 
   actualizarTelefono() {
     let data = {
       Telefono: this.newTelefono,
     };
-    this.apiService.putTelefono(this.clienteId, data).subscribe((response) => {
-      console.log('Teléfono actualizado:', response);
-    });
+    this.apiService
+      .putTelefono(this.clienteId, data)
+      .subscribe((response) => {});
   }
   actualizarCorreo() {
     let data = {
       email: this.newEmail,
     };
 
-    this.apiService.putEmail(this.clienteId, data).subscribe((response) => {
-      console.log('Correo electrónico actualizado:', response);
-    });
+    this.apiService.putEmail(this.clienteId, data).subscribe((response) => {});
   }
   actualizarContra() {
     const data = {
       password: this.newPassword,
     };
 
-    this.apiService.putPassword(this.clienteId, data).subscribe((response) => {
-      console.log('Contraseña actualizada:', response);
-    });
+    this.apiService
+      .putPassword(this.clienteId, data)
+      .subscribe((response) => {});
   }
 }

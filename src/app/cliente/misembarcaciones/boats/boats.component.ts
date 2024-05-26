@@ -43,7 +43,7 @@ export class BoatsComponent {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('Modal cerrado');
+
     });
   }
 }

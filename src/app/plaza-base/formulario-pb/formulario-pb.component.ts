@@ -114,7 +114,7 @@ export class FormularioPbComponent implements OnInit {
   }
   guardarPlazaBase() {
     var Administrativo_id = (document.getElementById('campoOculto') as HTMLInputElement).value;
-
+console.log(Administrativo_id);
     var formulario = document.forms.namedItem("formPlazabase") as HTMLFormElement;
     var formData = new FormData();
 

@@ -18,7 +18,7 @@
       <p class="service">Mis Servicios </p> 
       <ng-container *ngIf="tieneServicios">
         <ng-container *ngFor="let servicio of servicios">
-          <app-servicio
+          <app-servicio data-toggle="tooltip" data-placement="top" title="Ver ticket"
           [id]="servicio.id"
           [Estado]="servicio.Estado"
           [Servicio]="servicio.Servicio"

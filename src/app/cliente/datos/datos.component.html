@@ -4,7 +4,8 @@
   <div class="row">
     <div class="col-md-3">
       <div class="account-navigation">
-        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a> <span class="perfil">Mi perfil</span>
+        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a>
+        <span class="perfil">Mi perfil</span>
         <app-lateral></app-lateral>
       </div>
     </div>
@@ -55,7 +56,7 @@
           <form (ngSubmit)="actualizarCorreo()">
             <label class="MedioT">CORREO</label>
             <div>
-              <input [(ngModel)]="newEmail" name="newEmail" type="email"/>
+              <input [(ngModel)]="newEmail" name="newEmail" type="email" />
             </div>
             <button type="submit" class="btn camb">CAMBIAR</button>
           </form>
@@ -72,7 +73,7 @@
         </div>
         <div>
           <hr />
-          <form (ngSubmit)="actualizarContra()">
+          <form (ngSubmit)="actualizarContra()" #passwordForm="ngForm">
             <label class="MedioT">CONTRASEÑA</label>
             <div>
               <input
@@ -80,10 +81,24 @@
                 placeholder="*********"
                 name="newPassword"
                 [(ngModel)]="newPassword"
+                #newPasswordField="ngModel"
                 required
               />
             </div>
-            <button type="submit" class="btn camb">CAMBIAR</button>
+
+            <button
+              type="submit"
+              class="btn camb"
+              [disabled]="passwordForm.invalid"
+            >
+              CAMBIAR
+            </button>
+            <div
+              *ngIf="newPasswordField.invalid && newPasswordField.touched"
+              class="text-warning"
+            >
+              La contraseña no puede estar vacía.
+            </div>
           </form>
         </div>
       </div>

@@ -65,7 +65,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .content-container {
@@ -74,14 +74,15 @@ a {
   align-items: center;
   padding: 0 20px;
   width: 100%;
-  margin-top: 30px;
+  margin-bottom: 15px;
 }
 .rectangle {
   width: 750px;
-  height: 196px;
+  height: auto;
   background: #d0dce7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+
 }
 
 .content-container {
@@ -284,4 +285,18 @@ a {
   line-height: normal;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+input,select {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: "Questrial", sans-serif;
+  color: #555;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30px;
 }

@@ -25,9 +25,7 @@ export class MetodosPagoComponent implements OnInit {
       .subscribe((response: any) => {
         this.tarjetas = response.data;
         this.tieneTarjetas = this.tarjetas.length > 0;
-        console.log(this.tieneTarjetas);
-        console.log(this.tarjetas);
-      });
+        });
   }
 
 

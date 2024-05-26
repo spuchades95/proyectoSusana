@@ -35,23 +35,27 @@
   }
   
 
-.botones{
-  width: 200px;
-height: 36.721px;
-border-radius: 3.279px;
-background: var(--Golden-Tainoi-500, #F98F07);
-color: var(--Golden-Tainoi-50, #FFFAEB);
-text-align: center;
-/* H4 Lorem ipsum dolor */
-font-family: Questrial;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  .botones {
+    width: 200px;
+    height: 36.721px;
+    border-radius: 3.279px;
+    background: var(--Golden-Tainoi-500, #F98F07);
+    color: var(--Golden-Tainoi-50, #FFFAEB);
+    text-align: center;
+    font-family: Questrial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none; 
+margin-left: 5px;
+transition: box-shadow 0.3s ease; 
+  }
 
-}
 
-
+  .botones:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
   .card-container-wrapper {
     overflow-x: auto;
     margin-bottom: 15px;

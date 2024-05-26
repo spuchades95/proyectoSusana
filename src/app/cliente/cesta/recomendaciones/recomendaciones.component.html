@@ -1,12 +1,14 @@
 <div class="recomendaciones">
   <h2 class="title">También te puede interesar:</h2>
   <div class="images-container">
-    <img
+    <div  *ngFor="let servicio of servicios">
+    <img data-toggle="tooltip" data-placement="top" title="{{servicio.Nombre}}" 
       (click)="seleccionarServicio(servicio)"
-      *ngFor="let servicio of servicios"
       class="image"
       [src]="servicio.imageUrl"
-      alt=""
+      alt="{{servicio.Nombre}}"
     />
+    
+  </div>
   </div>
 </div>

@@ -1,9 +1,7 @@
-import { Component, HostListener , OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
-import { Router,ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { SharedDataService } from 'src/app/services/shared-data/shared-data.service';
-
-
 
 @Component({
   selector: 'app-dropdown',
@@ -14,13 +12,13 @@ export class DropdownComponent {
   isOpen: boolean = false;
   servicios: any = [];
 
-  constructor(private apiService: ApiService ,
-    private activatedRoute: ActivatedRoute,
+  constructor(
+    private apiService: ApiService,
     private sharedDataService: SharedDataService,
-    private router: Router) {}
+    private router: Router
+  ) {}
   toggleMenu() {
     this.isOpen = !this.isOpen;
-    
   }
 
   @HostListener('document:click', ['$event'])
@@ -35,7 +33,6 @@ export class DropdownComponent {
     this.apiService.getServicios().subscribe(
       (data: any) => {
         this.servicios = data;
-        console.log(data);
       },
       (error) => {
         console.error('Error al obtener servicios:', error);
@@ -43,12 +40,9 @@ export class DropdownComponent {
     );
   }
 
- seleccionarServicio(servicio: any) {
-
+  seleccionarServicio(servicio: any) {
     this.sharedDataService.setData('servicioSeleccionado', servicio);
-  
     this.router.navigate(['cliente/servicio', servicio.id]);
     this.isOpen = false;
   }
-  
 }

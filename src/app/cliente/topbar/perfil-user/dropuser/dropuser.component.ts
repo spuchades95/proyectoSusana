@@ -16,7 +16,8 @@ export class DropuserComponent {
 
 
   logout() {
-
+    localStorage.removeItem('datosSeleccionados');
+    localStorage.removeItem('serviciosParaPagar');
     this.tokenService.removeToken();
 
     this.router.navigate(['/login']);

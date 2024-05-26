@@ -21,24 +21,15 @@ export class RecomendacionesComponent {
     this.apiService.getRandomServices().subscribe((response: any[]) => {
       response.forEach((servicio) => {
         servicio.imageUrl = this.apiService.getImageUrl(servicio.Imagen);
-        console.log(servicio.imageUrl);
       });
       this.servicios = response;
     });
   }
  
-
-
   seleccionarServicio(servicio: any) {
-
     this.sharedDataService.setData('servicioSeleccionado', servicio);
-  
-    this.router.navigate(['cliente/servicio', servicio.id]);
+      this.router.navigate(['cliente/servicio', servicio.id]);
 
   }
-
-
-
-
 
 }

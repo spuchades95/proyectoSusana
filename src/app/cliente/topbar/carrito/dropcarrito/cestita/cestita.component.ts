@@ -16,7 +16,6 @@ export class CestitaComponent implements OnInit {
     const datosGuardados = localStorage.getItem('datosSeleccionados');
     if (datosGuardados) {
       this.datosSeleccionados = JSON.parse(datosGuardados);
-    console.log(this.datosSeleccionados);
     }
   }
   obtenerImageUrl(imagen: string): string | null {

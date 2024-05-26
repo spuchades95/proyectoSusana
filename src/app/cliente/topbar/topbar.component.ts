@@ -31,8 +31,6 @@ export class TopbarComponent {
   loadServices(): void {
     this.apiService.getServicios().subscribe((response: any) => {
       this.services = response;
-
-      console.log(this.services);
     });
   }
 
@@ -49,6 +47,5 @@ export class TopbarComponent {
     }
   }
 
- 
 
 }
