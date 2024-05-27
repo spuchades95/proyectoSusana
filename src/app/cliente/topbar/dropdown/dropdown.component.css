@@ -17,74 +17,73 @@
   cursor: pointer;
   padding-left: 10px;
   display: flex;
-  align-items: center; /* Alinea verticalmente la imagen y el texto */
-
+  align-items: center;
 }
 
 .menu {
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  margin-right: 10px;
 }
 
 .menu-text {
-  font-size: 1.2em; /* Tamaño del texto */
+  font-size: 1.2em;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: calc(100% + 5px); /* Coloca el menú debajo del texto */
+  top: calc(100% + 5px);
   left: 0;
   z-index: 1000;
- margin-left: 20px;
-  max-width: fit-content; 
+  margin-left: 20px;
+  max-width: fit-content;
   border-radius: 5px;
-  background: var(--Wedgewood-50, #F5F7FA);
+  background: var(--Wedgewood-50, #f5f7fa);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .dropdown.show .dropdown-content {
   display: flex;
-  flex-direction: column; /* Organiza los elementos verticalmente */
+  flex-direction: column; 
 }
 
 .line {
   cursor: text;
   flex: 1;
   height: 0;
-  border-top: 2px dashed #FFDF88; /* Utilizamos un borde punteado */
+  border-top: 2px dashed #ffdf88;
   margin-left: 10px;
 }
 .services-list {
-  margin-top: 10px; /* Espacio entre el título y la lista de servicios */
+  margin-top: 10px;
 }
 
 .services-list a {
-  z-index: 1000; /* O cualquier otro valor que sea mayor que el z-index de otros elementos */
+  z-index: 1000;
 }
-.title{
-text-decoration: none;
-cursor: text;
-color: var(--Wedgewood-950, #1D2834);
-
-/* H3 Lorem ipsum dolor */
-font-family: Questrial;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: 20px;
-}
-.services-list a {
-  display: block; /* Hace que los enlaces ocupen toda la anchura disponible */
-  margin: 25px; /* Espacio entre los enlaces */
-}
-a{
+.title {
   text-decoration: none;
-  color: var(--Wedgewood-950, #1D2834);
-/* H4 Lorem ipsum dolor */
-font-family: Questrial;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  cursor: text;
+  color: var(--Wedgewood-950, #1d2834);
+
+  /* H3 Lorem ipsum dolor */
+  font-family: Questrial;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 20px;
+}
+.services-list a {
+  display: block; 
+  margin: 25px; 
+}
+a {
+  text-decoration: none;
+  color: var(--Wedgewood-950, #1d2834);
+  /* H4 Lorem ipsum dolor */
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
