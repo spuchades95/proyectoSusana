@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SharedDataService } from 'src/app/services/shared-data/shared-data.service';
 
 import { ApiService } from 'src/app/services/api/api.service';
@@ -23,7 +23,7 @@ export class InicioComponent {
       (data: any[]) => {
         this.servicios = data.map((servicio) => {
           servicio.imageUrl = this.apiService.getImageUrl(servicio.Imagen);
-      
+
           return servicio;
         });
       },

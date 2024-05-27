@@ -15,7 +15,7 @@
       <app-tarjetas></app-tarjetas>
       <ng-container *ngIf="tieneTarjetas">
         <ng-container *ngFor="let tarjeta of tarjetas">
-          <app-existetarjeta  
+          <app-existetarjeta
             [idTarjeta]="tarjeta.id"
             [numero]="tarjeta.numero_tarjeta"
             [fechaCaducidad]="tarjeta.fecha_expiracion"

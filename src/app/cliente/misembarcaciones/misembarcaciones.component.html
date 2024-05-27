@@ -4,35 +4,34 @@
   <div class="row">
     <div class="col-md-3">
       <div class="account-navigation">
-        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a> <span class="perfil">Mis embarcaciones</span>
-       
-       <app-lateral></app-lateral>
+        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a>
+        <span class="perfil">Mis embarcaciones</span>
+
+        <app-lateral></app-lateral>
       </div>
     </div>
 
     <div class="col-md-9">
-      
-     <div class="Info">Embarcaciones</div>
-     
+      <div class="Info">Embarcaciones</div>
+
       <br />
-    
+
       <ng-container *ngIf="tieneBarcos">
         <ng-container *ngFor="let barco of barcos">
-         <app-boats
-         [idbarco]="barco.id"
-         [Origen]="barco.Origen"
-         [Matricula]="barco.Matricula"
-         [TipoBarco]="barco.TipoBarco"
-         [NombreBarco]="barco.NombreBarco"
-         [Manga]="barco.Manga"
-         [Eslora]="barco.Eslora"
-         [Modelo]="barco.Modelo"
-         [NumeroPlaza]="barco.NumeroPlaza"
-         [FechaInicio]="barco.FechaInicio"     
-         [FechaFinalizacion]="barco.FechaFinalizacion"
-         [Plaza]="barco.Plaza"
-       
-         ></app-boats>
+          <app-boats
+            [idbarco]="barco.id"
+            [Origen]="barco.Origen"
+            [Matricula]="barco.Matricula"
+            [TipoBarco]="barco.TipoBarco"
+            [NombreBarco]="barco.NombreBarco"
+            [Manga]="barco.Manga"
+            [Eslora]="barco.Eslora"
+            [Modelo]="barco.Modelo"
+            [NumeroPlaza]="barco.NumeroPlaza"
+            [FechaInicio]="barco.FechaInicio"
+            [FechaFinalizacion]="barco.FechaFinalizacion"
+            [Plaza]="barco.Plaza"
+          ></app-boats>
         </ng-container>
       </ng-container>
     </div>

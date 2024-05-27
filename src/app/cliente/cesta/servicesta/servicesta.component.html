@@ -2,7 +2,12 @@
   <div class="rectangle">
     <div class="content-container">
       <div class="text-container">
-        <input type="checkbox" (change)="toggleSeleccionado()" [checked]="servicio.seleccionado" class="service" />
+        <input
+          type="checkbox"
+          (change)="toggleSeleccionado()"
+          [checked]="servicio.seleccionado"
+          class="service"
+        />
       </div>
       <div class="image-column">
         <img class="image-container" [src]="obtenerImageUrl(servicio.imagen)" />

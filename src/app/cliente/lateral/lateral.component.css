@@ -1,32 +1,27 @@
-
 .izquierda {
-    color: var(--Wedgewood-900, #2c3e4e);
-    /* 16 questrial */
-    font-family: Questrial;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 37px;
-    margin-left: 78px;
-    margin-bottom: 10px;
-  }
-  .izquierdaT {
-    color: var(--Wedgewood-950, #1d2834);
-    /* H4 Lorem ipsum dolor */
-    font-family: Questrial;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 55px;
-    margin-left: 78px;
-    margin-bottom: 35px;
-  }
-  
-   
-  a {
-    text-decoration: none;
-  
-  }
-  
+  color: var(--Wedgewood-900, #2c3e4e);
+  font-family: Questrial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 37px;
+  margin-left: 78px;
+  margin-bottom: 10px;
+}
+.izquierdaT {
+  color: var(--Wedgewood-950, #1d2834);
+  /* H4 Lorem ipsum dolor */
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 55px;
+  margin-left: 78px;
+  margin-bottom: 35px;
+}
+
+a {
+  text-decoration: none;
+}

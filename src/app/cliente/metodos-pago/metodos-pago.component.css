@@ -37,12 +37,11 @@ hr.vertical-line {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 29.463px; /* 147.313% */
+  line-height: 29.463px;
 }
 
 .izquierda {
   color: var(--Wedgewood-900, #2c3e4e);
-  /* 16 questrial */
   font-family: Questrial;
   font-size: 18px;
   font-style: normal;
@@ -79,7 +78,6 @@ a {
 
 .Info {
   color: var(--Wedgewood-950, #1d2834);
-
   /* H1 Lorem ipsim dolor */
   font-family: Questrial;
   font-size: 39.063px;

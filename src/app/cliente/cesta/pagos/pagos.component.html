@@ -4,16 +4,21 @@
   <div class="row">
     <div class="col-md-8">
       <div class="account-navigation">
-        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a> <span class="perfil">Pagos</span>
+        <a class="izquierdaT" routerLink="/cliente/inicio">Inicio/</a>
+        <span class="perfil">Pagos</span>
       </div>
       <div class="contenedordelacesta">
         <form (submit)="realizarPago()">
           <div class="group-container">
             <div class="rectangle">
               <label class="selectmet">Seleccione su embarcación: </label>
-              
+
               <select (change)="seleccionarEmbarcacion($event)">
-                <option selected *ngFor="let barco of barcos" [value]="barco.id">
+                <option
+                  selected
+                  *ngFor="let barco of barcos"
+                  [value]="barco.id"
+                >
                   {{ barco.NombreBarco }}
                 </option>
               </select>
@@ -53,8 +58,12 @@
           <div class="group-container">
             <div class="rectangle">
               <label class="selectmet">Seleccione su método de pago:</label>
-              <select  (change)="seleccionarMetodoDePago($event)">
-                <option selected *ngFor="let metodo of tarjetas" [value]="metodo.id">
+              <select (change)="seleccionarMetodoDePago($event)">
+                <option
+                  selected
+                  *ngFor="let metodo of tarjetas"
+                  [value]="metodo.id"
+                >
                   {{ metodo.numero_tarjeta }} - {{ metodo.nombre_tarjeta }}
                 </option>
               </select>
@@ -90,7 +99,13 @@
           <div class="group-container">
             <div class="content-container">
               <div class="botones">
-                <button type="submit" class="btn boton" [disabled]="!embarcacionSeleccionada || !metodoDePagoSeleccionado">
+                <button
+                  type="submit"
+                  class="btn boton"
+                  [disabled]="
+                    !embarcacionSeleccionada || !metodoDePagoSeleccionado
+                  "
+                >
                   Pagar
                 </button>
               </div>

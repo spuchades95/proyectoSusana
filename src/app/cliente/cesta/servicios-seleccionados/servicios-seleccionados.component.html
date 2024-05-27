@@ -1,28 +1,30 @@
 <div *ngFor="let servicio of serviciosSeleccionados; let i = index">
-    <div class="group-container">
-      <div class="rectangle">
-        <div class="content-container">
+  <div class="group-container">
+    <div class="rectangle">
+      <div class="content-container">
+        <div class="text-container">
+          <input type="checkbox" checked="checked" disabled class="service" />
+        </div>
+        <div class="image-column">
+          <img
+            class="image-container"
+            [src]="obtenerImageUrl(servicio.imagen)"
+          />
+        </div>
+        <div class="text-column">
           <div class="text-container">
-            <input type="checkbox" checked="checked" disabled class="service" />
+            <p class="title">{{ servicio.nombre }}</p>
           </div>
-          <div class="image-column">
-            <img class="image-container" [src]="obtenerImageUrl(servicio.imagen)" />
+          <div class="text-container">
+            <p class="price">{{ servicio.precio }}€</p>
           </div>
-          <div class="text-column">
-            <div class="text-container">
-              <p class="title">{{ servicio.nombre }}</p>
-            </div>
-            <div class="text-container">
-              <p class="price">{{ servicio.precio }}€</p>
-            </div>
-          </div>
-          <div class="icon-column">
-            <a (click)="eliminarServicio(i)" class="trigger-icon">
-              <img src="assets/img/equis.svg" alt="Eliminar servicio" />
-            </a>
-          </div>
+        </div>
+        <div class="icon-column">
+          <a (click)="eliminarServicio(i)" class="trigger-icon">
+            <img src="assets/img/equis.svg" alt="Eliminar servicio" />
+          </a>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

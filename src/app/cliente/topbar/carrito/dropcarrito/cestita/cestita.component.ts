@@ -3,15 +3,12 @@ import { ApiService } from 'src/app/services/api/api.service';
 @Component({
   selector: 'app-cestita',
   templateUrl: './cestita.component.html',
-  styleUrls: ['./cestita.component.css']
+  styleUrls: ['./cestita.component.css'],
 })
 export class CestitaComponent implements OnInit {
   @Input() datosSeleccionados: any[] = [];
   imageUrl: string | null = null;
-  constructor(
-
-    private apiService: ApiService
-  ) {}
+  constructor(private apiService: ApiService) {}
   ngOnInit() {
     const datosGuardados = localStorage.getItem('datosSeleccionados');
     if (datosGuardados) {
@@ -23,6 +20,9 @@ export class CestitaComponent implements OnInit {
   }
   eliminarDelCarrito(index: number) {
     this.datosSeleccionados.splice(index, 1);
-    localStorage.setItem('datosSeleccionados', JSON.stringify(this.datosSeleccionados));
+    localStorage.setItem(
+      'datosSeleccionados',
+      JSON.stringify(this.datosSeleccionados)
+    );
   }
 }

@@ -72,8 +72,6 @@ export class ServicioComponent implements OnInit {
       },
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-
-    });
+    dialogRef.afterClosed().subscribe((result) => {});
   }
 }

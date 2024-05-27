@@ -1,15 +1,15 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
 
-
 @Component({
   selector: 'app-servicios-seleccionados',
   templateUrl: './servicios-seleccionados.component.html',
-  styleUrls: ['./servicios-seleccionados.component.css']
+  styleUrls: ['./servicios-seleccionados.component.css'],
 })
 export class ServiciosSeleccionadosComponent {
   @Input() serviciosSeleccionados: any[] = [];
-  @Output() servicioEliminado: EventEmitter<number> = new EventEmitter<number>();
+  @Output() servicioEliminado: EventEmitter<number> =
+    new EventEmitter<number>();
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {}
@@ -20,6 +20,5 @@ export class ServiciosSeleccionadosComponent {
 
   eliminarServicio(index: number) {
     this.servicioEliminado.emit(index);
-  
   }
 }

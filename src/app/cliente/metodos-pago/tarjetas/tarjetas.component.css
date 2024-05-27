@@ -69,7 +69,7 @@
 }
 
 .owner-expiry {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 .plus {
@@ -80,7 +80,7 @@
 .card-info,
 .owner-expiry {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 .card-number {
   margin-left: 10px;

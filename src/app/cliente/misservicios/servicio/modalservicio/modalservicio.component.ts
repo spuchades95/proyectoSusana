@@ -5,15 +5,15 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
   selector: 'app-modalservicio',
   templateUrl: './modalservicio.component.html',
-  styleUrls: ['./modalservicio.component.css']
+  styleUrls: ['./modalservicio.component.css'],
 })
 export class ModalservicioComponent {
-servicio:dialogoserrvicio;
+  servicio: dialogoserrvicio;
 
-constructor(
-  public dialogRef: MatDialogRef<ModalservicioComponent>,
-  @Inject(MAT_DIALOG_DATA) public data: dialogoserrvicio 
-) {
-  this.servicio = { ...data }; 
-}
+  constructor(
+    public dialogRef: MatDialogRef<ModalservicioComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: dialogoserrvicio
+  ) {
+    this.servicio = { ...data };
+  }
 }

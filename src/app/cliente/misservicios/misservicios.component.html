@@ -15,18 +15,21 @@
       <div class="Info">Servicios</div>
 
       <br />
-      <p class="service">Mis Servicios </p> 
+      <p class="service">Mis Servicios</p>
       <ng-container *ngIf="tieneServicios">
         <ng-container *ngFor="let servicio of servicios">
-          <app-servicio data-toggle="tooltip" data-placement="top" title="Ver ticket"
-          [id]="servicio.id"
-          [Estado]="servicio.Estado"
-          [Servicio]="servicio.Servicio"
-          [FechaContratacion]="servicio.FechaContratacion"
-          [Imagen]="servicio.Imagen"
-          [Ticket_Numero]="servicio.Ticket_Numero"
-          [Ticket_Total]="servicio.Ticket_Total"
-          (actualizaEstado)="actualizarListaServicios($event)"  
+          <app-servicio
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Ver ticket"
+            [id]="servicio.id"
+            [Estado]="servicio.Estado"
+            [Servicio]="servicio.Servicio"
+            [FechaContratacion]="servicio.FechaContratacion"
+            [Imagen]="servicio.Imagen"
+            [Ticket_Numero]="servicio.Ticket_Numero"
+            [Ticket_Total]="servicio.Ticket_Total"
+            (actualizaEstado)="actualizarListaServicios($event)"
           ></app-servicio>
         </ng-container>
       </ng-container>

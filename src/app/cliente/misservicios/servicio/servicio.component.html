@@ -1,26 +1,30 @@
-
-<div class="rectangle"  (click)="openModal()">
+<div class="rectangle" (click)="openModal()">
   <img [src]="imageUrl" class="img" alt="{{ Servicio }}" />
   <div class="info">
     <p class="servi">
-        Servicio: <span class="service">{{ Servicio }}</span>
-      </p>
-      <p class="servi">
-        Contratado: <span class="service">{{ FechaContratacion }}</span>
-      </p>
-</div>
-    <div class="right-column">
-      <p class="servi">Estado:
+      Servicio: <span class="service">{{ Servicio }}</span>
+    </p>
+    <p class="servi">
+      Contratado: <span class="service">{{ FechaContratacion }}</span>
+    </p>
+  </div>
+  <div class="right-column">
+    <p class="servi">
+      Estado:
       <span class="service">{{ Estado }}</span>
-      <img [src]="statusImageUrl" class="status-image" /></p>
-      <ng-container *ngIf="EstadoActivo">
-        <div (click)="actualizaestado(id)">
-      <a data-toggle="tooltip" data-placement="top" title="Cancelar servicio" class="drop"> Dar de baja <img src="assets/img/stop.svg" /> </a>
-    </div>
+      <img [src]="statusImageUrl" class="status-image" />
+    </p>
+    <ng-container *ngIf="EstadoActivo">
+      <div (click)="actualizaestado(id)">
+        <a
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Cancelar servicio"
+          class="drop"
+        >
+          Dar de baja <img src="assets/img/stop.svg" />
+        </a>
+      </div>
     </ng-container>
- 
-    </div>
-     
-
-
+  </div>
 </div>

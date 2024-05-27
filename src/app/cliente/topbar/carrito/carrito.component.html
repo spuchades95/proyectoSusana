@@ -1,7 +1,6 @@
 <div class="carrito-container" (click)="toggleDropdown()">
-  <app-dropcarrito class="dropuser"  *ngIf="showDropUser"></app-dropcarrito> 
-  
+  <app-dropcarrito class="dropuser" *ngIf="showDropUser"></app-dropcarrito>
+
   <img alt="Carrito" src="/assets/img/carrito.svg" class="carrito-img" />
-    <div class="numero-elementos">{{ obtenerCantidadCarrito() }}</div>
-  
-  </div>
+  <div class="numero-elementos">{{ obtenerCantidadCarrito() }}</div>
+</div>

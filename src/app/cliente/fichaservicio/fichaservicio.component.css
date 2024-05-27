@@ -152,15 +152,14 @@
   flex-direction: column;
 }
 input[type="radio"] {
-  -ms-transform:  scale(2.1); 
-  -webkit-transform:  scale(2.1);; 
-  transform:  scale(2.1);
-
+  -ms-transform: scale(2.1);
+  -webkit-transform: scale(2.1);
+  transform: scale(2.1);
 }
 
 input[type="radio"]:checked {
-  -ms-transform:  scale(2.1);; 
-  -webkit-transform:  scale(2.1); 
+  -ms-transform: scale(2.1);
+  -webkit-transform: scale(2.1);
   transform: scale(2.1);
-  accent-color:#dd6802;
+  accent-color: #dd6802;
 }

@@ -1,5 +1,4 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { AuthService } from 'src/app/shared/auth.service';
 import { TokenService } from 'src/app/shared/token.service';
 import { Router } from '@angular/router';
 
@@ -12,7 +11,7 @@ export class PerfilUserComponent {
   name: string = this.capitalizeFirstLetter(localStorage.getItem('name') || 'Usuario');
   role = localStorage.getItem('role') || null;
 
-  constructor(private authService: AuthService, private router: Router, private tokenService: TokenService) { }
+  constructor(private router: Router, private tokenService: TokenService) { }
   showDropUser: boolean = false;
   @Output() dropdownToggled = new EventEmitter<boolean>();
 

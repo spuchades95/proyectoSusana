@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cesta',
   templateUrl: './cesta.component.html',
-  styleUrls: ['./cesta.component.css']
+  styleUrls: ['./cesta.component.css'],
 })
 export class CestaComponent implements OnInit {
   serviciosSeleccionados: any[] = [];
@@ -18,27 +18,37 @@ export class CestaComponent implements OnInit {
   }
 
   eliminarDelCarrito(id: number) {
-    this.serviciosSeleccionados = this.serviciosSeleccionados.filter(servicio => servicio.id !== id);
-    localStorage.setItem('datosSeleccionados', JSON.stringify(this.serviciosSeleccionados));
+    this.serviciosSeleccionados = this.serviciosSeleccionados.filter(
+      (servicio) => servicio.id !== id
+    );
+    localStorage.setItem(
+      'datosSeleccionados',
+      JSON.stringify(this.serviciosSeleccionados)
+    );
     this.actualizarServiciosParaPagar();
-
   }
 
   actualizarServiciosSeleccionados(servicio: any) {
-    const index = this.serviciosSeleccionados.findIndex(s => s.id === servicio.id);
+    const index = this.serviciosSeleccionados.findIndex(
+      (s) => s.id === servicio.id
+    );
     if (index !== -1) {
       this.serviciosSeleccionados[index] = servicio;
-   
     }
-    localStorage.setItem('datosSeleccionados', JSON.stringify(this.serviciosSeleccionados));
+    localStorage.setItem(
+      'datosSeleccionados',
+      JSON.stringify(this.serviciosSeleccionados)
+    );
     this.actualizarServiciosParaPagar();
-
   }
 
   actualizarServiciosParaPagar() {
-    this.serviciosParaPagar = this.serviciosSeleccionados.filter(servicio => servicio.seleccionado);
-    localStorage.setItem('serviciosParaPagar', JSON.stringify(this.serviciosParaPagar));
-
-
+    this.serviciosParaPagar = this.serviciosSeleccionados.filter(
+      (servicio) => servicio.seleccionado
+    );
+    localStorage.setItem(
+      'serviciosParaPagar',
+      JSON.stringify(this.serviciosParaPagar)
+    );
   }
 }

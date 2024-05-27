@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalboatsComponent } from './modalboats/modalboats.component';
-import { ApiService } from 'src/app/services/api/api.service';
+
 @Component({
   selector: 'app-boats',
   templateUrl: './boats.component.html',
@@ -42,8 +42,6 @@ export class BoatsComponent {
       },
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-
-    });
+    dialogRef.afterClosed().subscribe((result) => {});
   }
 }

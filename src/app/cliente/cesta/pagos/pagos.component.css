@@ -82,7 +82,6 @@ a {
   background: #d0dce7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-
 }
 
 .content-container {
@@ -180,7 +179,7 @@ a {
   font-weight: 400;
 }
 .content {
-  margin:auto;
+  margin: auto;
 }
 .resumen-pedido {
   width: 349px;
@@ -211,7 +210,7 @@ a {
   color: black;
   flex: 1;
   text-align: center;
-}  
+}
 .background {
   width: 100%;
   height: 100%;
@@ -219,7 +218,6 @@ a {
   left: 0;
   z-index: -1;
 }
-
 
 .total {
   display: flex;
@@ -286,7 +284,8 @@ a {
   margin-top: 15px;
   margin-bottom: 30px;
 }
-input,select {
+input,
+select {
   height: 45px;
   border-radius: 5px;
   border: 1px solid #ccc;

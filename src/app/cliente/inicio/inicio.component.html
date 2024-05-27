@@ -1,7 +1,6 @@
 <app-topbar> </app-topbar>
 
 <div class="container-fluid">
-
   <div class="row">
     <div class="col">
       <div class="banner">
@@ -12,8 +11,15 @@
   <div class="carousel-container">
     <div id="carousel" class="carousel">
       <div class="card-container">
-        <div data-toggle="tooltip" data-placement="top" title="{{servicio.Nombre}}" (click)="seleccionarServicio(servicio)" *ngFor="let servicio of servicios" class="card">
-          <img  [src]="servicio.imageUrl" alt="{{ servicio.Nombre }}" />
+        <div
+          data-toggle="tooltip"
+          data-placement="top"
+          title="{{ servicio.Nombre }}"
+          (click)="seleccionarServicio(servicio)"
+          *ngFor="let servicio of servicios"
+          class="card"
+        >
+          <img [src]="servicio.imageUrl" alt="{{ servicio.Nombre }}" />
           <div class="card-overlay"></div>
           <div class="card-body">
             <h5 class="card-title">{{ servicio.Nombre }}</h5>

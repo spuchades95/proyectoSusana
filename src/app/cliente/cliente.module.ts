@@ -21,7 +21,7 @@ import { DropcarritoComponent } from './topbar/carrito/dropcarrito/dropcarrito.c
 import { CestaComponent } from './cesta/cesta.component';
 import { ResumenpedidoComponent } from './cesta/resumenpedido/resumenpedido.component';
 import { RecomendacionesComponent } from './cesta/recomendaciones/recomendaciones.component';
-import { TarjetaComponent } from './cesta/tarjeta/tarjeta.component';
+
 
 import { PagosComponent } from './cesta/pagos/pagos.component';
 import { ServicestaComponent } from './cesta/servicesta/servicesta.component';
@@ -57,8 +57,6 @@ import { ServiciosSeleccionadosComponent } from './cesta/servicios-seleccionados
     CestaComponent,
     ResumenpedidoComponent,
     RecomendacionesComponent,
-    TarjetaComponent,
-   
     PagosComponent,
     ServicestaComponent,
     ExistetarjetaComponent,

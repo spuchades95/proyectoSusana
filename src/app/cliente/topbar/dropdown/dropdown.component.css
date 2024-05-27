@@ -43,7 +43,7 @@
 
 .dropdown.show .dropdown-content {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .line {
@@ -74,8 +74,8 @@
   margin: 20px;
 }
 .services-list a {
-  display: block; 
-  margin: 25px; 
+  display: block;
+  margin: 25px;
 }
 a {
   text-decoration: none;

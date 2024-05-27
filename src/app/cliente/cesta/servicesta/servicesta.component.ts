@@ -6,7 +6,7 @@ import { ApiService } from 'src/app/services/api/api.service';
   styleUrls: ['./servicesta.component.css'],
 })
 export class ServicestaComponent {
-  @Input() servicio: any = {}; 
+  @Input() servicio: any = {};
   @Output() servicioEliminado = new EventEmitter<number>();
   @Output() servicioSeleccionado = new EventEmitter<any>();
   constructor(private apiService: ApiService) {}

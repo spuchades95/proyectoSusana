@@ -1,7 +1,6 @@
-import { Component,  } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-addtarjetas',
@@ -16,10 +15,7 @@ export class AddtarjetasComponent {
   FechaCaducidad: any = '';
   CVV: any = '';
   idLocalStorage: any;
-  constructor(
-    private apiService: ApiService,
-    private router: Router
-  ) {
+  constructor(private apiService: ApiService, private router: Router) {
     this.idLocalStorage = localStorage.getItem('clienteId');
   }
 

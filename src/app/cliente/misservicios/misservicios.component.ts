@@ -3,26 +3,22 @@ import { ApiService } from 'src/app/services/api/api.service';
 @Component({
   selector: 'app-misservicios',
   templateUrl: './misservicios.component.html',
-  styleUrls: ['./misservicios.component.css']
+  styleUrls: ['./misservicios.component.css'],
 })
 export class MisserviciosComponent implements OnInit {
   idLocalStorage: any;
   tieneServicios: boolean = false;
   servicios: any[] = [];
-  constructor(
-    private apiService: ApiService,
-
-  ) {
+  constructor(private apiService: ApiService) {
     this.idLocalStorage = localStorage.getItem('clienteId');
   }
   ngOnInit() {
-
-    this.apiService.getServiceOfClient(this.idLocalStorage).subscribe((response: any) => {
-      this.servicios = response.data;
-      this.tieneServicios = this.servicios.length > 0;
-     
-    });
-  
+    this.apiService
+      .getServiceOfClient(this.idLocalStorage)
+      .subscribe((response: any) => {
+        this.servicios = response.data;
+        this.tieneServicios = this.servicios.length > 0;
+      });
   }
 
   actualizarListaServicios(idTarjetaEliminada: number): void {

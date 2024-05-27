@@ -47,6 +47,6 @@
   line-height: normal;
   align-self: flex-end;
   margin: 10px;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  text-decoration: underline; /* Subraya el texto */
+  cursor: pointer; 
+  text-decoration: underline; 
 }

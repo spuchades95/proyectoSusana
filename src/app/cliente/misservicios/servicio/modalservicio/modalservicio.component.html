@@ -1,30 +1,33 @@
-
 <div mat-dialog-content class="modal-body details">
   <div class="details-body">
     <div class="ticket-section">
       <h2 class="info">Ticket</h2>
       <div class="ticket-info">
         <div class="line"></div>
-        <p><span class="especial">Número de ticket:</span> {{ servicio.Ticket_Numero }}</p>
+        <p>
+          <span class="especial">Número de ticket:</span>
+          {{ servicio.Ticket_Numero }}
+        </p>
         <div class="line"></div>
       </div>
     </div>
     <div class="description-price">
       <div class="description-container">
-      <div class="description">
-        <h2 class="info">Descripción</h2>
-        <div class="line"></div>
-        <p><span class="label">Servicio: {{ servicio.Servicio }} </span> </p>
-       
+        <div class="description">
+          <h2 class="info">Descripción</h2>
+          <div class="line"></div>
+          <p>
+            <span class="label">Servicio: {{ servicio.Servicio }} </span>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="price-container">
-      <div class="price">
-        <h2 class="info">Precio: </h2>
-        <div class="line"></div>
-        <p class="label">{{ servicio.Ticket_Total }} €</p>
-     </div>
-    </div>
+      <div class="price-container">
+        <div class="price">
+          <h2 class="info">Precio:</h2>
+          <div class="line"></div>
+          <p class="label">{{ servicio.Ticket_Total }} €</p>
+        </div>
+      </div>
     </div>
     <div class="ticket-section">
       <div class="line"></div>
