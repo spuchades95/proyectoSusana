@@ -1,6 +1,7 @@
 .topbardos {
   position: relative;
   height: 50px;
+  width: auto;
   background: var(--Wedgewood-900, #2c3e4e);
   color: var(--Wedgewood-50, #f5f7fa);
   font-family: Questrial;
