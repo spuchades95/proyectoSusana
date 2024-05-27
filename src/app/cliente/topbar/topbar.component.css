@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   height: 74px;
+  width: auto;
   background: var(--Wedgewood-500, #4f7796);
 
 }
