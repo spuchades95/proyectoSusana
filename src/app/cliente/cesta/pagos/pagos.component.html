@@ -14,8 +14,9 @@
               <label class="selectmet">Seleccione su embarcación: </label>
 
               <select (change)="seleccionarEmbarcacion($event)">
+                <option>Selección</option>
                 <option
-                  selected
+                  
                   *ngFor="let barco of barcos"
                   [value]="barco.id"
                 >
@@ -59,8 +60,9 @@
             <div class="rectangle">
               <label class="selectmet">Seleccione su método de pago:</label>
               <select (change)="seleccionarMetodoDePago($event)">
+                <option>Selección</option>
                 <option
-                  selected
+                  
                   *ngFor="let metodo of tarjetas"
                   [value]="metodo.id"
                 >
