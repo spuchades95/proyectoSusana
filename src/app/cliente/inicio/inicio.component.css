@@ -47,11 +47,31 @@
   font-weight: 400;
   line-height: normal;
   border: none;
+  margin-left: 55px;
+  transition: box-shadow 0.3s ease;
+}
+
+.botones1 {
+  width: 200px;
+  height: 36.721px;
+  border-radius: 3.279px;
+  background: var(--goldenTainoi900, #7a2e0d);
+  color: var(--Golden-Tainoi-50, #fffaeb);
+  text-align: center;
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
   margin-left: 5px;
   transition: box-shadow 0.3s ease;
 }
 
 .botones:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.botones1:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .card-container-wrapper {
