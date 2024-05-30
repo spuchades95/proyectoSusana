@@ -145,3 +145,27 @@ h1 {
   text-align: center;
   z-index: 1;
 }
+
+@media (max-width: 1200px) {
+  .banner h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 40px;
+  }
+  .botones,
+  .botones1 {
+    width: 150px;
+    font-size: 16px;
+  }
+  .card {
+    width: 200px;
+    height: 160px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+}
