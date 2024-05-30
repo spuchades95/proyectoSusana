@@ -53,24 +53,3 @@ a {
   text-decoration-color: #f98f07;
   text-decoration-thickness: 3px;
 }
-@media (min-width: 768px) {
-  .account-navigation {
-    margin-top: 37px;
-    margin-left: 78px;
-    margin-bottom: 31px;
-  }
-
-  .izquierdaT {
-    margin-top: 55px;
-    margin-left: 78px;
-    margin-bottom: 35px;
-  }
-
-  .Info {
-    font-size: 39.063px;
-  }
-
-  .service {
-    font-size: 20px;
-  }
-}

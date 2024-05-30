@@ -36,28 +36,4 @@
     line-height: normal;
   
   }
-  @media (max-width: 767px) {
-    .personita {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%; 
-      max-width: 250px; 
-    }
   
-    .dropuser {
-      left: 0;
-    }
-  }
-  
-
-  @media (min-width: 768px) {
-    .personita {
-      left: 53%; 
-      transform: translateX(-50%);
-      width: 210px; 
-    }
-  
-    .dropuser {
-      left: 0;
-    }
-  }

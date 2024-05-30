@@ -64,29 +64,3 @@ a {
   margin-left: 45px;
   margin-bottom: 30px;
 }
-@media (max-width: 767px) {
-  .background {
-    width: 100%;
-    margin-top: 0;
-  }
-  
-  .triangle {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .cestito {
-    font-size: 16px;
-    padding: 10px;
-  }
-  
-  .line {
-    width: 150px;
-    margin-left: 15px;
-    margin-right: 20px;
-  }
-  
-  .boton {
-    margin-left: 30px;
-  }
-}
