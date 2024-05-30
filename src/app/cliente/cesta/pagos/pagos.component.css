@@ -345,33 +345,3 @@ select {
     width: 100%;
   }
 }
-
-@media (max-width: 576px) {
-  .izquierdaT, .perfil {
-    font-size: 16px;
-  }
-
-  .selectmet {
-    font-size: 16px;
-  }
-
-  .card-label {
-    font-size: 16px;
-  }
-
-  .card-data {
-    font-size: 14px;
-  }
-
-  .owner, .expiry-date {
-    font-size: 8px;
-  }
-
-  .label-t, .value-t {
-    font-size: 24px;
-  }
-
-  .label, .value {
-    font-size: 14px;
-  }
-}
