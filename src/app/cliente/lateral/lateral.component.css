@@ -25,3 +25,35 @@
 a {
   text-decoration: none;
 }
+@media (max-width: 1200px) {
+  .izquierda,
+  .izquierdaT {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .izquierda,
+  .izquierdaT {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .izquierdaT {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .izquierda,
+  .izquierdaT {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .izquierdaT {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}

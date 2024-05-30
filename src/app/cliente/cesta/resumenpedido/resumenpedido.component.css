@@ -107,3 +107,37 @@
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 576px) {
+  .resumen-pedido {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .item {
+    margin-left: 0;
+  }
+
+  .label-t,
+  .value-t {
+    font-size: 24px;
+  }
+
+  .label,
+  .value {
+    font-size: 14px;
+  }
+
+  .botones {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .letrita {
+    font-size: 10px;
+  }
+}

@@ -87,3 +87,31 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 767px) {
+  .topbardos {
+    height: 60px;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  .dropdown {
+    padding-left: 5px;
+  }
+
+  .menu-text {
+    display: none;
+  }
+
+  .dropdown-content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .line {
+    margin-left: 5px;
+  }
+
+  .services-list a {
+    margin: 10px;
+  }
+}

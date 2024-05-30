@@ -29,3 +29,22 @@
   border-radius: 20px;
   object-fit: cover;
 }
+@media (max-width: 992px) {
+  .recomendaciones {
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  .images-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image {
+    width: calc(50% - 10px);
+    height: auto;
+    margin-bottom: 20px;
+  }
+}

@@ -200,3 +200,88 @@ a {
   line-height: normal;
   margin-top: 25px;
 }
+@media (max-width: 1200px) {
+  .welcome-message {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .account-details,
+  .contact-details {
+    margin-left: 5%;
+  }
+
+  .formacount {
+    flex-direction: column;
+  }
+
+  .formRight {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .formLeft .mb-3 input,
+  .formRight .mb-3 select,
+  input,
+  select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .guarda {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .contact-details .camb {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-message {
+    padding: 10px;
+  }
+
+  .Info {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .Label-f,
+  .MedioT {
+    font-size: 18px;
+  }
+
+  .wmesa {
+    font-size: 20px;
+  }
+
+  .account-navigation {
+    margin-left: 20px;
+  }
+
+  .account-details,
+  .contact-details {
+    margin-left: 20px;
+  }
+
+  .guarda {
+    font-size: 12px;
+  }
+
+  .camb {
+    font-size: 12px;
+  }
+
+  .formLeft .mb-3 input,
+  .formRight .mb-3 select,
+  input,
+  select {
+    font-size: 16px;
+  }
+}
