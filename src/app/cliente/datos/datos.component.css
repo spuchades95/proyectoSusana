@@ -202,13 +202,13 @@ a {
 }
 @media (max-width: 1366px) {
   .formLeft,
-  .formRight ,guarda{
+  .formRight {
     width: 100%;
     margin-right: 15px;
   }
 
   .formLeft .mb-3,
-  .formRight .mb-3 ,guarda{
+  .formRight .mb-3 {
     width: 100%;
     margin-bottom: 5px;
   }
@@ -219,5 +219,10 @@ a {
 
   .button-container {
     margin-top: 10px;
+    text-align: right;
+  }
+  .guarda {
+   
+    margin-left: 185px; 
   }
 }
