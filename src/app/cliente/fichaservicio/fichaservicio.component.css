@@ -39,6 +39,7 @@
   width: 305px;
   height: 56px;
   border-color: #a6bed3;
+  margin-right: 5px;
 }
 
 .contractNow {
@@ -47,6 +48,7 @@
   width: 305px;
   height: 56px;
   border-color: #dd6802;
+  margin-left: 15px;
 }
 
 .priceSection {
@@ -163,3 +165,32 @@ input[type="radio"]:checked {
   transform: scale(2.1);
   accent-color: #dd6802;
 }
+.perfil {
+  color: var(--Wedgewood-950, #1d2834);
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.izquierdaT {
+  color: var(--Wedgewood-950, #1d2834);
+  /* H4 Lorem ipsum dolor */
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  
+
+
+}a {
+  text-decoration: none;
+}
+.account-navigation {
+  margin-top: 37px;
+  margin-left: -120px;
+  margin-bottom: 31px;
+  position: relative;
+}
+
