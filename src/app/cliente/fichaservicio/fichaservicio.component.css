@@ -181,3 +181,23 @@ a {
   margin-bottom: 31px;
   position: relative;
 }
+@media (max-width: 1366px) {
+  .container { width: 1000px; }
+  .title { font-size: 30px; padding-left: 0; text-align: left; }
+  .description { font-size: 18px; margin-bottom: 50px; text-align: left; }
+  .priceSection, .priceBackground, .priceTitle { width: 500px; }
+  .options { flex-direction: column; }
+  .option { width: 100%; }
+  .optionContent { flex-direction: column; text-align: center; }
+  .button {
+    width: auto;
+    height: auto;
+ 
+  }
+  .addToCart,
+  .contractNow {
+    margin: 5px;
+  }
+  .account-navigation, .izquierdaT, .perfil { margin: 0 auto 10px; display: block; text-align: left; }
+  .image { width: 350px; height: auto; margin-right: 10px;  }
+}
