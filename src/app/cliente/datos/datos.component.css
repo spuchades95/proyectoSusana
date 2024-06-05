@@ -200,7 +200,7 @@ a {
   line-height: normal;
   margin-top: 25px;
 }
-@media (max-width: 1025px) {
+@media (max-width: 1366px) {
   .formLeft,
   .formRight {
     width: 100%;
