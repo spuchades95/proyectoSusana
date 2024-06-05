@@ -1,18 +1,15 @@
 <nav class="topbar">
-  <img routerLink="/cliente/inicio" alt="Logo portos de galicia" src="/assets/img/Group.svg" class="logo" />
-
-  <form (submit)="search()">
-    <input
-      class="buscador"
-      placeholder="Buscando..."
-      type="text"
-      name="busca"
-      [(ngModel)]="searchTerm"
-    />
+  <div class="logo-container">
+    <img routerLink="/cliente/inicio" alt="Logo portos de galicia" src="/assets/img/Group.svg" class="logo" />
+  </div>
+  
+  <form (submit)="search()" class="search-form">
+    <input class="buscador" placeholder="Buscando..." type="text" name="busca" [(ngModel)]="searchTerm" />
   </form>
+  
   <div class="right">
-<app-perfil-user (dropdownToggled)="handleDropdownToggle($event)"></app-perfil-user>
- <app-carrito></app-carrito>
-</div>
+    <app-perfil-user (dropdownToggled)="handleDropdownToggle($event)"></app-perfil-user>
+    <app-carrito></app-carrito>
+  </div>
 </nav>
 <app-dropdown></app-dropdown>
