@@ -1,14 +1,12 @@
 .banner {
   width: 100%;
-  overflow: hidden;
   margin-top: 29px;
   text-align: center;
-  width: 100%;
   height: 301px;
-  background: rgba(0, 0, 0, 0.5) url(/assets/img/banner.png) center/cover
-    no-repeat;
+  background: rgba(0, 0, 0, 0.5) url(/assets/img/banner.png) center/cover no-repeat;
   position: relative;
 }
+
 .banner::before {
   content: "";
   position: absolute;
@@ -20,9 +18,9 @@
 }
 
 .carousel-container {
-  position: relative;
   width: 100%;
 }
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -34,46 +32,37 @@
   overflow-x: hidden;
 }
 
-.botones {
+.botones,
+.botones1 {
   width: 200px;
-  height: 36.721px;
-  border-radius: 3.279px;
-  background: var(--Golden-Tainoi-500, #f98f07);
-  color: var(--Golden-Tainoi-50, #fffaeb);
+  height: 37px;
+  border-radius: 3px;
   text-align: center;
   font-family: Questrial;
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   border: none;
-  margin-left: 55px;
   transition: box-shadow 0.3s ease;
+}
+
+.botones {
+  background: #f98f07;
+  color: #fffaeb;
+  margin-left: 55px;
 }
 
 .botones1 {
-  width: 200px;
-  height: 36.721px;
-  border-radius: 3.279px;
-  background: var(--goldenTainoi900, #7a2e0d);
-  color: var(--Golden-Tainoi-50, #fffaeb);
-  text-align: center;
-  font-family: Questrial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  border: none;
+  background: #7a2e0d;
+  color: #fffaeb;
   margin-left: 5px;
-  transition: box-shadow 0.3s ease;
 }
 
-.botones:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+.botones:hover,
 .botones1:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .card-container-wrapper {
   overflow-x: auto;
   margin-bottom: 15px;
@@ -84,6 +73,7 @@
   flex-wrap: nowrap;
   justify-content: space-around;
 }
+
 .card {
   width: 258px;
   height: 212px;
@@ -100,12 +90,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(217, 217, 217, 0) 0%,
-    rgba(66, 103, 135, 0.8) 100%
-  );
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(66, 103, 135, 0.8) 100%);
 }
+
 .card-body {
   position: absolute;
   bottom: 10px;
@@ -114,34 +101,51 @@
 }
 
 .card-title {
-  color: var(--Wedgewood-50, #f5f7fa);
+  color: #f5f7fa;
   text-align: center;
-  /* H3 Lorem ipsum dolor */
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: var(--Wedgewood-50, #f5f7fa);
   font-family: Questrial;
   font-size: 25px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 h1 {
-  color: var(--Wedgewood-50, #f5f7fa);
-  text-align: center;
+  color: #f5f7fa;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: var(--Wedgewood-50, #f5f7fa);
   font-family: Questrial;
   font-size: 96px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   position: absolute;
-  white-space: nowrap;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
+  white-space: nowrap;
   z-index: 1;
+}
+
+@media (max-width: 1366px) {
+
+  .banner {
+    height: 200px;
+  }
+  
+  .carousel-container {
+    max-width: 1366px;
+    overflow-x: auto;
+  }
+  
+  .card {
+    width: 200px;
+    height: 160px;
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+  .botones,
+  .botones1 {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
 }
