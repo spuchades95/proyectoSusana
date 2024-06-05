@@ -6,10 +6,11 @@
 }
 
 .image {
-  width: 500px;
-  height: 700px;
+  width: 400px;
+  height: 600px;
   background: linear-gradient(0deg, #d9d9d9 0%, #d9d9d9 100%);
   border-radius: 5px;
+  margin-left: auto;
 }
 
 .title {
@@ -189,7 +190,7 @@ input[type="radio"]:checked {
 }
 .account-navigation {
   margin-top: 37px;
-  margin-left: -120px;
+  margin-left: -80px;
   margin-bottom: 31px;
   position: relative;
 }
