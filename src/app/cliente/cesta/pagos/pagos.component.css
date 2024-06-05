@@ -1,63 +1,33 @@
-.account-navigation {
-  margin-top: 37px;
-  margin-left: 78px;
-  margin-bottom: 31px;
-  position: relative;
-}
-a {
-  text-decoration: none;
-}
-.izquierdaT {
+.account-navigation, .izquierdaT, .Info, .cesta, .perfil {
   color: var(--Wedgewood-950, #1d2834);
-  /* H4 Lorem ipsum dolor */
   font-family: Questrial;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 55px;
-  margin-left: 78px;
-  margin-bottom: 35px;
 }
-.Info {
-  color: var(--Wedgewood-950, #1d2834);
-  /* H1 Lorem ipsim dolor */
-  font-family: Questrial;
-  font-size: 39.063px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 25px;
+
+.account-navigation {
+  margin: 37px 0 31px 78px;
+  position: relative;
+}
+
+.izquierdaT {
+  margin: 55px 0 35px 78px;
 }
 
 .cesta {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: var(--Wedgewood-950, #1d2834);
-  /* H4 Lorem ipsum dolor */
-  font-family: Questrial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.patata {
-  margin-top: 95px !important;
-  margin-bottom: 20px;
+  margin: 30px 0;
 }
 
-.perfil {
-  color: var(--Wedgewood-950, #1d2834);
-  font-family: Questrial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.patata {
+  margin: 95px 0 20px;
 }
+
 .contenedordelacesta {
-  margin-top: 35px;
-  margin-left: 190px;
+  margin: 35px 0 0 190px;
 }
+
 .group-container {
   width: 750px;
   height: 196px;
@@ -76,6 +46,7 @@ a {
   width: 100%;
   margin-bottom: 15px;
 }
+
 .rectangle {
   width: 750px;
   height: auto;
@@ -107,19 +78,15 @@ a {
   margin-left: 53px;
 }
 
-.card-details {
+.card-details, .owner-expiry, .card-info {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .owner-expiry {
   margin-left: 10px;
 }
-.card-info,
-.owner-expiry {
-  display: flex;
-  align-items: center;
-}
+
 .expiry-date {
   color: var(--Wedgewood-600, #426787);
   font-family: Questrial;
@@ -129,6 +96,7 @@ a {
   line-height: normal;
   margin-left: 60px;
 }
+
 .plus {
   margin-left: 10px;
   width: 40px;
@@ -138,13 +106,13 @@ a {
 .card-number {
   margin-left: 10px;
   color: var(--Input-Color, #000);
-  /* P Lorem ipsim dolor */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .credit-card-design {
   width: 547px;
   height: auto;
@@ -160,27 +128,29 @@ a {
   display: flex;
   align-items: center;
 }
+
 .card-label {
   color: #000;
-  /* H4 Lorem ipsum dolor */
   font-family: Questrial;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 0.7;
 }
+
 .card-data {
   color: #000;
   text-align: center;
-  /* P Lorem ipsim dolor */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
 }
+
 .content {
   margin: auto;
 }
+
 .resumen-pedido {
   width: 349px;
   height: auto;
@@ -189,13 +159,15 @@ a {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   padding: 20px;
 }
+
 .item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
   margin-left: 25px;
 }
-.label-t {
+
+.label-t, .value-t {
   font-family: Questrial;
   font-size: 31.25px;
   font-weight: 400;
@@ -203,14 +175,7 @@ a {
   flex: 1;
   text-align: center;
 }
-.value-t {
-  font-family: Questrial;
-  font-size: 31.25px;
-  font-weight: 400;
-  color: black;
-  flex: 1;
-  text-align: center;
-}
+
 .background {
   width: 100%;
   height: 100%;
@@ -224,15 +189,7 @@ a {
   justify-content: space-between;
 }
 
-.label {
-  font-family: Questrial;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  flex: 1;
-}
-
-.value {
+.label, .value {
   font-family: Questrial;
   font-size: 16px;
   font-weight: 400;
@@ -240,6 +197,7 @@ a {
   flex: 1;
   text-align: center;
 }
+
 .boton {
   border-radius: 3.279px;
   background: var(--Golden-Tainoi-500, #f98f07);
@@ -248,13 +206,13 @@ a {
   height: 36.721px;
   color: var(--Golden-Tainoi-50, #fffaeb);
   text-align: center;
-
   font-family: Questrial;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .botones {
   display: flex;
   flex-direction: column;
@@ -262,20 +220,20 @@ a {
   justify-content: center;
   margin-left: 190px;
 }
+
 .letrita {
   color: var(--Wedgewood-300, #a6bed3);
-
   font-family: Questrial;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .title {
   color: var(--Wedgewood-950, #1d2834);
   text-align: center;
-  /* H4 Lorem ipsum dolor */
-  -webkit-text-stroke: 1.5px var(----Wedgewood-950, #1d2834);
+  -webkit-text-stroke: 1.5px var(--Wedgewood-950, #1d2834);
   font-family: Questrial;
   font-size: 20px;
   font-style: normal;
@@ -284,8 +242,8 @@ a {
   margin-top: 15px;
   margin-bottom: 30px;
 }
-input,
-select {
+
+input, select {
   height: 45px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -299,6 +257,7 @@ select {
   background-position: right;
   background-size: 30px;
 }
+
 @media (max-width: 1366px) {
   .account-navigation {
     margin-left: 40px;
