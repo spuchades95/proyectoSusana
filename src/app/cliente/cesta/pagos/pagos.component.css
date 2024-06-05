@@ -299,3 +299,22 @@ select {
   background-position: right;
   background-size: 30px;
 }
+@media (max-width: 1366px) {
+  .account-navigation {
+    margin-left: 40px;
+  }
+  
+  .izquierdaT {
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .contenedordelacesta {
+    margin-left: 40px;
+  }
+  
+  .botones {
+    margin-left: 40px;
+  }
+}

@@ -34,3 +34,16 @@
   font-weight: 400;
   word-wrap: break-word;
 }
+@media (max-width: 1366px) {
+  .cestita {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .imagen-container {
+    width: 80px;
+    height: 70px;
+    margin: 5px;
+  }
+}
