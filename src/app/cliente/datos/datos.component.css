@@ -200,3 +200,24 @@ a {
   line-height: normal;
   margin-top: 25px;
 }
+@media (max-width: 1585px) {
+  .formLeft,
+  .formRight {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .formLeft .mb-3,
+  .formRight .mb-3 {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .formRight {
+    margin-left: 0;
+  }
+
+  .button-container {
+    margin-top: 10px;
+  }
+}
