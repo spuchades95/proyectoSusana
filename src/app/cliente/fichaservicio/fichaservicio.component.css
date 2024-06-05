@@ -6,11 +6,10 @@
 }
 
 .image {
-  width: 400px;
-  height: 600px;
+  width: 500px;
+  height: 700px;
   background: linear-gradient(0deg, #d9d9d9 0%, #d9d9d9 100%);
   border-radius: 5px;
-  margin-left: auto;
 }
 
 .title {
@@ -34,22 +33,19 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.addToCart {
+.addToCart,
+.contractNow {
   background: #a6bed3;
   color: #1d2834;
   width: 305px;
   height: 56px;
   border-color: #a6bed3;
-  margin-right: 5px;
 }
 
 .contractNow {
   background: #dd6802;
   color: #fffaeb;
-  width: 305px;
-  height: 56px;
-  border-color: #dd6802;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .priceSection {
@@ -59,9 +55,9 @@
 
 .priceBackground {
   background: #4f7796;
+  border-radius: 5px;
   width: 610px;
   height: 56px;
-  border-radius: 5px;
   padding-top: 5px;
 }
 
@@ -99,7 +95,6 @@
 
 .option {
   display: flex;
-
   flex-direction: row;
 }
 
@@ -110,39 +105,38 @@
   margin-right: 10px;
   white-space: nowrap;
 }
+
 .formacount {
   display: flex;
   justify-content: space-between;
 }
-.optionPriceText {
-  color: black;
-  font-size: 20px;
-  font-family: Questrial;
-  align-self: baseline;
-  margin-right: 10px;
-}
+
+.optionPriceText,
 .optionPrice {
   color: black;
   font-size: 20px;
   font-family: Questrial;
   margin-right: 10px;
 }
-.formLeft {
-  flex: 1;
-}
 
+.formLeft,
 .formRight {
   flex: 1;
 }
+
 .additionalInfo {
   top: 385px;
   left: 822px;
+  display: flex;
+  flex-direction: column;
 }
+
 .centra {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
+
 .infoItem {
   color: black;
   font-size: 20px;
@@ -150,48 +144,40 @@
   margin-bottom: 10px;
   margin-left: 65px;
 }
-.additionalInfo {
-  display: flex;
-  flex-direction: column;
-}
-input[type="radio"] {
-  -ms-transform: scale(2.1);
-  -webkit-transform: scale(2.1);
-  transform: scale(2.1);
-}
 
+input[type="radio"],
 input[type="radio"]:checked {
   -ms-transform: scale(2.1);
   -webkit-transform: scale(2.1);
   transform: scale(2.1);
   accent-color: #dd6802;
 }
-.perfil {
-  color: var(--Wedgewood-950, #1d2834);
-  font-family: Questrial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+
+.perfil,
 .izquierdaT {
   color: var(--Wedgewood-950, #1d2834);
-  /* H4 Lorem ipsum dolor */
   font-family: Questrial;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  
+}
 
+.izquierdaT {
+  font-family: Questrial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
-}a {
+a {
   text-decoration: none;
 }
+
 .account-navigation {
   margin-top: 37px;
-  margin-left: -80px;
+  margin-left: -120px;
   margin-bottom: 31px;
   position: relative;
 }
-
